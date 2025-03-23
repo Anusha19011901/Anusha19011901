@@ -2,8 +2,7 @@
 
 
 
-# 💫 About Me:
-👯 I’m looking to collaborate on a prompt engineering project<br>🌱 I’m currently learning advanced cybersecurity tools<br>💬 Ask me about data science, cybersecurity and web dev<br>⚡ Fun fact : i love debating
+
 
 
 ## 🌐 Socials:
