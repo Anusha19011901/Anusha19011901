@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-logo">Portfolio</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero / About -->
+  <section id="about" class="hero">
+    <div class="hero-content">
+      <h1>Hi, I'm <span class="highlight">Your Name</span></h1>
+      <p class="tagline">Software Developer · Designer · Creator</p>
+      <p class="bio">
+        I build things for the web. Passionate about clean code, great UX,
+        and solving interesting problems.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-grid">
+
+      <div class="card">
+        <div class="card-header">Project One</div>
+        <p class="card-description">
+          A short description of what this project does and the problem it solves.
+        </p>
+        <div class="card-tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+        </div>
+        <div class="card-links">
+          <a href="#" class="btn btn-sm">Live Demo</a>
+          <a href="#" class="btn btn-sm btn-outline">GitHub</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">Project Two</div>
+        <p class="card-description">
+          A short description of what this project does and the problem it solves.
+        </p>
+        <div class="card-tags">
+          <span class="tag">React</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">API</span>
+        </div>
+        <div class="card-links">
+          <a href="#" class="btn btn-sm">Live Demo</a>
+          <a href="#" class="btn btn-sm btn-outline">GitHub</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">Project Three</div>
+        <p class="card-description">
+          A short description of what this project does and the problem it solves.
+        </p>
+        <div class="card-tags">
+          <span class="tag">Python</span>
+          <span class="tag">SQL</span>
+          <span class="tag">Data</span>
+        </div>
+        <div class="card-links">
+          <a href="#" class="btn btn-sm">Live Demo</a>
+          <a href="#" class="btn btn-sm btn-outline">GitHub</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="skills-section">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-grid">
+
+      <div class="skill-group">
+        <h3>Languages</h3>
+        <ul>
+          <li>HTML &amp; CSS</li>
+          <li>JavaScript</li>
+          <li>Python</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h3>Frameworks</h3>
+        <ul>
+          <li>React</li>
+          <li>Node.js</li>
+          <li>Express</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h3>Tools</h3>
+        <ul>
+          <li>Git &amp; GitHub</li>
+          <li>VS Code</li>
+          <li>Figma</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <p class="contact-subtitle">Have a project in mind or just want to say hi?</p>
+    <form class="contact-form" onsubmit="handleSubmit(event)">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="your@email.com" required />
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="What's on your mind?" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+    <div class="social-links">
+      <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:you@email.com">Email</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Your Name. Built with HTML, CSS &amp; JavaScript.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
