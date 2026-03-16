@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact | Anusha Seshadri</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "primary": "#87b09a",
+          "accent": "#a899d4",
+          "background-light": "#f6f7f8",
+          "background-dark": "#0d0f14",
+        },
+        fontFamily: { "display": ["Inter"] },
+        borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+      },
+    },
+  }
+</script>
+<style>
+  body { font-family: 'Inter', sans-serif; }
+  ::selection { background: rgba(168,153,212,0.4); color: #f1f5f9; }
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+</style>
+</head>
+<body class="bg-background-dark text-slate-100 font-display">
+<div id="scroll-bar" style="position:fixed;top:0;left:0;height:2px;width:0%;background:linear-gradient(to right,#87b09a,#a899d4);z-index:9999;pointer-events:none;transition:width 0.08s linear;"></div>
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+
+  <!-- Navigation -->
+  <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-800 px-6 md:px-20 py-4 bg-background-dark sticky top-0 z-50 backdrop-blur-md">
+    <div class="flex items-center gap-4 text-slate-100">
+      <div class="size-6 text-primary">
+        <span class="material-symbols-outlined text-3xl">terminal</span>
+      </div>
+      <h2 class="text-lg font-bold leading-tight tracking-tight">Anusha Seshadri</h2>
+    </div>
+    <div class="flex flex-1 justify-end gap-8">
+      <div class="flex items-center gap-9">
+        <a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="index.html">Work</a>
+        <a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="projects.html">Projects</a>
+        <a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="about.html">About</a>
+        <a class="text-primary text-sm font-bold leading-normal" href="contact.html">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex flex-1 justify-center py-12 md:py-24 px-6">
+    <div class="layout-content-container flex flex-col max-w-[640px] flex-1">
+
+      <!-- Hero Section -->
+      <div class="flex flex-col gap-4 mb-12">
+        <h1 class="text-slate-100 text-5xl font-black leading-tight tracking-tight">
+          say hi :)
+        </h1>
+        <p class="text-slate-400 text-lg font-normal leading-relaxed max-w-md">
+          no pressure — drop a message about a role, a collab, a cool idea, or literally anything.
+        </p>
+      </div>
+
+      <!-- Contact Form -->
+      <form class="flex flex-col gap-6" id="contact-form" onsubmit="handleSubmit(event)">
+        <div class="flex flex-col gap-2">
+          <label class="text-slate-500 text-sm font-medium">your name</label>
+          <input class="form-input w-full rounded-lg border border-slate-800 bg-slate-900 text-slate-100 focus:ring-2 focus:ring-primary focus:border-primary h-14 px-4 text-base transition-all outline-none" placeholder="what do i call you?" type="text" name="name" required/>
+        </div>
+        <div class="flex flex-col gap-2">
+          <label class="text-slate-500 text-sm font-medium">your email</label>
+          <input class="form-input w-full rounded-lg border border-slate-800 bg-slate-900 text-slate-100 focus:ring-2 focus:ring-primary focus:border-primary h-14 px-4 text-base transition-all outline-none" placeholder="so i can write back" type="email" name="email" required/>
+        </div>
+        <div class="flex flex-col gap-2">
+          <label class="text-slate-500 text-sm font-medium">what's up</label>
+          <textarea class="form-input w-full rounded-lg border border-slate-800 bg-slate-900 text-slate-100 focus:ring-2 focus:ring-primary focus:border-primary min-h-[160px] p-4 text-base transition-all outline-none resize-none" placeholder="tell me everything (or just the gist)" name="message" required></textarea>
+        </div>
+        <button class="hover:opacity-90 text-slate-900 font-semibold py-4 px-8 rounded-lg transition-all flex items-center justify-center gap-2 group" style="background:#87b09a" type="submit" id="submit-btn">
+          send it
+          <span class="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform">send</span>
+        </button>
+      </form>
+
+      <!-- Social Links -->
+      <div class="mt-20 pt-10 border-t border-slate-800">
+        <p class="text-slate-600 text-sm mb-6">or find me here</p>
+        <div class="flex flex-wrap gap-6">
+          <a class="flex items-center gap-2 text-slate-300 hover:text-primary transition-colors" href="https://github.com/Anusha19011901" target="_blank" rel="noopener">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.43.372.82 1.102.82 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            <span class="font-medium">GitHub</span>
+          </a>
+          <a class="flex items-center gap-2 text-slate-300 hover:text-primary transition-colors" href="https://www.linkedin.com/in/anusha-seshadri-9021a3215/" target="_blank" rel="noopener">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            <span class="font-medium">LinkedIn</span>
+          </a>
+          <a class="flex items-center gap-2 text-slate-300 hover:text-primary transition-colors" href="mailto:anushaseshadri1901@gmail.com" data-copy-email>
+            <span class="material-symbols-outlined">alternate_email</span>
+            <span class="font-medium">anushaseshadri1901@gmail.com</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="px-6 md:px-20 py-10 text-center text-slate-600 text-sm border-t border-slate-800">
+    made with too much coffee · anusha seshadri · 2026
+  </footer>
+
+</div>
+</div>
+
+<script>
+  window.addEventListener('scroll', () => {
+    const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100;
+    document.getElementById('scroll-bar').style.width = pct + '%';
+  }, {passive: true});
+  document.querySelectorAll('[data-copy-email]').forEach(el => {
+    el.addEventListener('click', e => {
+      e.preventDefault();
+      navigator.clipboard.writeText('anushaseshadri1901@gmail.com').catch(()=>{});
+      const toast = document.createElement('div');
+      toast.textContent = 'copied! ✓';
+      toast.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(8px);background:#1e293b;color:#87b09a;font-size:13px;font-weight:600;padding:8px 18px;border-radius:999px;border:1px solid rgba(135,176,154,0.3);z-index:9999;opacity:0;transition:all 0.2s ease;pointer-events:none;';
+      document.body.appendChild(toast);
+      requestAnimationFrame(() => { toast.style.opacity='1'; toast.style.transform='translateX(-50%) translateY(0)'; });
+      setTimeout(() => { toast.style.opacity='0'; setTimeout(()=>toast.remove(), 200); }, 2000);
+    });
+  });
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    const btn = document.getElementById('submit-btn');
+    btn.textContent = 'Sent!';
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.innerHTML = 'Send Message <span class="material-symbols-outlined text-xl">send</span>';
+      btn.disabled = false;
+      event.target.reset();
+    }, 3000);
+  }
+</script>
+</body>
+</html>

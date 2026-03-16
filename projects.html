@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Projects | Anusha Seshadri</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "primary": "#87b09a",
+          "accent": "#a899d4",
+          "background-dark": "#0d0f14",
+        },
+        fontFamily: { "display": ["Inter", "sans-serif"] },
+      },
+    },
+  }
+</script>
+<style>
+  body { font-family: 'Inter', sans-serif; background: #0d0f14; }
+  ::selection { background: rgba(168,153,212,0.4); color: #f1f5f9; }
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+  .dot-grid {
+    background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 10px;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 999px;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    background: rgba(255,255,255,0.03);
+  }
+</style>
+</head>
+<body class="text-slate-100 font-display">
+<div id="scroll-bar" style="position:fixed;top:0;left:0;height:2px;width:0%;background:linear-gradient(to right,#87b09a,#a899d4);z-index:9999;pointer-events:none;transition:width 0.08s linear;"></div>
+
+<!-- Navigation -->
+<header class="flex items-center justify-between px-6 md:px-16 py-5 border-b border-white/5 sticky top-0 z-50 backdrop-blur-md" style="background: rgba(13,15,20,0.85);">
+  <a href="index.html" class="flex items-center gap-3">
+    <span class="material-symbols-outlined text-2xl" style="color:#87b09a">terminal</span>
+    <span class="font-bold text-base tracking-tight text-white">Anusha Seshadri</span>
+  </a>
+  <nav class="flex items-center gap-8">
+    <a class="text-sm text-slate-400 hover:text-white transition-colors" href="index.html">Work</a>
+    <a class="text-sm text-white font-semibold" href="projects.html">Projects</a>
+    <a class="text-sm text-slate-400 hover:text-white transition-colors" href="about.html">About</a>
+    <a class="text-sm text-slate-400 hover:text-white transition-colors" href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main class="max-w-[720px] mx-auto px-6 md:px-8 pt-16 md:pt-24 pb-32">
+
+  <!-- Page Header -->
+  <div class="mb-20">
+    <h1 class="text-5xl md:text-6xl font-black leading-none tracking-tight mb-2">Selected</h1>
+    <h2 class="text-5xl md:text-6xl font-black leading-none tracking-tight text-slate-600 mb-6">Research &amp; Works.</h2>
+    <p class="text-slate-400 text-base leading-relaxed max-w-md">
+      A collection of ML systems, full-stack applications, and research in agentic AI, anomaly detection, and data engineering.
+    </p>
+  </div>
+
+  <!-- PROJECT LIST -->
+  <div class="space-y-28">
+
+    <!-- 01: NGAFID -->
+    <article>
+      <div class="w-full rounded-lg overflow-hidden mb-6 relative" style="aspect-ratio:16/7;">
+        <div class="absolute inset-0" style="background: linear-gradient(135deg, #0d2018, #0d1a14, #0a0c10)"></div>
+        <div class="absolute inset-0 dot-grid"></div>
+        <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,12,16,0.7), transparent)"></div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="absolute w-96 h-40 rounded-full" style="background: radial-gradient(ellipse, rgba(135,176,154,0.18), transparent 70%); filter: blur(40px);"></div>
+        </div>
+        <svg class="absolute inset-0 w-full h-full opacity-35" viewBox="0 0 720 280" preserveAspectRatio="none">
+          <path d="M0,180 C120,140 180,220 360,160 C540,100 600,200 720,150" stroke="#87b09a" stroke-width="1.5" fill="none" opacity="0.7"/>
+          <path d="M0,200 C100,160 220,230 360,180 C500,130 620,210 720,170" stroke="#87b09a" stroke-width="1" fill="none" opacity="0.45"/>
+          <path d="M0,220 C150,180 240,240 360,200 C480,160 600,230 720,190" stroke="#a899d4" stroke-width="1" fill="none" opacity="0.3"/>
+          <path d="M0,160 C80,120 200,190 360,140 C520,90 640,170 720,130" stroke="#87b09a" stroke-width="0.8" fill="none" opacity="0.25"/>
+          <path d="M0,240 C100,210 260,250 360,220 C460,190 600,250 720,215" stroke="#87b09a" stroke-width="0.7" fill="none" opacity="0.2"/>
+        </svg>
+      </div>
+      <div class="space-y-3">
+        <p class="text-xs font-semibold tracking-widest text-slate-500 uppercase">01 / Research</p>
+        <h3 class="text-2xl font-bold text-white flex items-center gap-2">
+          Predictive Anomaly Detection in NGAFID
+          <a href="https://github.com/Anusha19011901" target="_blank" rel="noopener" class="text-slate-600 hover:text-primary transition-colors">
+            <span class="material-symbols-outlined text-xl">north_east</span>
+          </a>
+        </h3>
+        <p class="text-slate-400 text-sm leading-relaxed max-w-xl">
+          Architected a two-stage subsequence anomaly detection pipeline (OC-SVM + neuroevolutionary RNN — trained 10,000 genomes on NVIDIA GPU) using real time-series flight data from the NGAFID general aviation database. Developed explainable AI to interpret anomalous flight subsequences and sensor behavior for safety insights in flight training operations. Processed 6,000+ flight segments.
+        </p>
+        <div class="flex flex-wrap gap-2 pt-1">
+          <span class="tag">PyTorch</span>
+          <span class="tag">OC-SVM</span>
+          <span class="tag">Neuroevolution</span>
+          <span class="tag">Python</span>
+          <span class="tag">CUDA</span>
+          <span class="tag">Weights & Biases</span>
+          <span class="tag">Docker</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- 02: SolAi -->
+    <article>
+      <div class="w-full rounded-lg overflow-hidden mb-6 relative" style="aspect-ratio:16/7;">
+        <div class="absolute inset-0" style="background: linear-gradient(135deg, #160e28, #120d20, #0a0c10)"></div>
+        <div class="absolute inset-0 dot-grid"></div>
+        <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,12,16,0.7), transparent)"></div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="absolute w-72 h-72 rounded-full" style="background: radial-gradient(ellipse, rgba(168,153,212,0.18), transparent 70%); filter: blur(60px);"></div>
+        </div>
+        <svg class="absolute inset-0 w-full h-full opacity-22" viewBox="0 0 720 280">
+          <circle cx="360" cy="140" r="60" stroke="#a899d4" stroke-width="1" fill="none"/>
+          <circle cx="360" cy="140" r="100" stroke="#a899d4" stroke-width="0.8" fill="none"/>
+          <circle cx="360" cy="140" r="140" stroke="#c4b8e4" stroke-width="0.6" fill="none"/>
+          <circle cx="360" cy="140" r="180" stroke="#a899d4" stroke-width="0.4" fill="none"/>
+          <line x1="360" y1="0" x2="360" y2="280" stroke="#a899d4" stroke-width="0.5" opacity="0.5"/>
+          <line x1="0" y1="140" x2="720" y2="140" stroke="#a899d4" stroke-width="0.5" opacity="0.5"/>
+        </svg>
+      </div>
+      <div class="space-y-3">
+        <p class="text-xs font-semibold tracking-widest text-slate-500 uppercase">02 / Agentic AI</p>
+        <h3 class="text-2xl font-bold text-white flex items-center gap-2">
+          SolAi – Workflow Analytics &amp; LLM Integration
+          <a href="https://github.com/Anusha19011901" target="_blank" rel="noopener" class="text-slate-600 hover:text-accent transition-colors" style="--tw-text-opacity:1">
+            <span class="material-symbols-outlined text-xl">north_east</span>
+          </a>
+        </h3>
+        <p class="text-slate-400 text-sm leading-relaxed max-w-xl">
+          Developed a workflow automation dashboard with an agentic AI chat feature capable of performing tasks such as lead management, email automation, and reminders. Implemented using MCP servers and ElevenLabs voice integration. Built backend microservices with event-driven architecture and cloud-based storage. Logged rich event data to support A/B testing of prompts and workflows.
+        </p>
+        <div class="flex flex-wrap gap-2 pt-1">
+          <span class="tag">LLMs</span>
+          <span class="tag">MCP Servers</span>
+          <span class="tag">ElevenLabs</span>
+          <span class="tag">REST APIs</span>
+          <span class="tag">Docker</span>
+          <span class="tag">CI/CD</span>
+          <span class="tag">Agentic AI</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- 03: YogiSync -->
+    <article>
+      <div class="w-full rounded-lg overflow-hidden mb-6 relative" style="aspect-ratio:16/7;">
+        <div class="absolute inset-0" style="background: linear-gradient(135deg, #0d2018, #121a14, #0a0c10)"></div>
+        <div class="absolute inset-0 dot-grid"></div>
+        <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,12,16,0.7), transparent)"></div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="absolute w-80 h-48 rounded-full" style="background: radial-gradient(ellipse, rgba(135,176,154,0.2), transparent 70%); filter: blur(50px);"></div>
+        </div>
+        <svg class="absolute inset-0 w-full h-full opacity-28" viewBox="0 0 720 280">
+          <circle cx="360" cy="60" r="20" stroke="#87b09a" stroke-width="1.5" fill="none"/>
+          <line x1="360" y1="80" x2="360" y2="160" stroke="#87b09a" stroke-width="1.5"/>
+          <line x1="360" y1="100" x2="300" y2="140" stroke="#87b09a" stroke-width="1.5"/>
+          <line x1="360" y1="100" x2="420" y2="140" stroke="#87b09a" stroke-width="1.5"/>
+          <line x1="360" y1="160" x2="320" y2="230" stroke="#87b09a" stroke-width="1.5"/>
+          <line x1="360" y1="160" x2="400" y2="230" stroke="#87b09a" stroke-width="1.5"/>
+          <circle cx="300" cy="140" r="4" fill="#87b09a" opacity="0.6"/>
+          <circle cx="420" cy="140" r="4" fill="#87b09a" opacity="0.6"/>
+          <circle cx="320" cy="230" r="4" fill="#a899d4" opacity="0.5"/>
+          <circle cx="400" cy="230" r="4" fill="#a899d4" opacity="0.5"/>
+        </svg>
+      </div>
+      <div class="space-y-3">
+        <p class="text-xs font-semibold tracking-widest text-slate-500 uppercase">03 / Health Tech</p>
+        <h3 class="text-2xl font-bold text-white flex items-center gap-2">
+          YogiSync – AI Yoga Web App
+          <a href="https://github.com/Anusha19011901" target="_blank" rel="noopener" class="text-slate-600 hover:text-primary transition-colors">
+            <span class="material-symbols-outlined text-xl">north_east</span>
+          </a>
+        </h3>
+        <p class="text-slate-400 text-sm leading-relaxed max-w-xl">
+          AI-powered yoga web application with LLM-guided personalized plans featuring both text-to-voice and voice-to-text interaction. Integrated MediaPipe for real-time posture detection and feedback. Supports live chat sessions and adaptive personalized yoga journeys based on user progress.
+        </p>
+        <div class="flex flex-wrap gap-2 pt-1">
+          <span class="tag">MediaPipe</span>
+          <span class="tag">LLM</span>
+          <span class="tag">Voice AI</span>
+          <span class="tag">React</span>
+          <span class="tag">Computer Vision</span>
+          <span class="tag">Node.js</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- 04: MendPath -->
+    <article>
+      <div class="w-full rounded-lg overflow-hidden mb-6 relative" style="aspect-ratio:16/7;">
+        <div class="absolute inset-0" style="background: linear-gradient(135deg, #1a1028, #150e20, #0a0c10)"></div>
+        <div class="absolute inset-0 dot-grid"></div>
+        <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,12,16,0.7), transparent)"></div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="absolute w-96 h-56 rounded-full" style="background: radial-gradient(ellipse, rgba(168,153,212,0.2), transparent 70%); filter: blur(60px);"></div>
+        </div>
+        <svg class="absolute inset-0 w-full h-full opacity-22" viewBox="0 0 720 280">
+          <path d="M0,140 L80,140 L100,100 L120,180 L140,80 L160,200 L180,120 L200,160 L220,140 L320,140" stroke="#a899d4" stroke-width="1.5" fill="none"/>
+          <path d="M320,140 L420,140 L440,110 L460,170 L480,90 L500,190 L520,130 L540,155 L560,140 L720,140" stroke="#a899d4" stroke-width="1.5" fill="none"/>
+        </svg>
+      </div>
+      <div class="space-y-3">
+        <p class="text-xs font-semibold tracking-widest text-slate-500 uppercase">04 / Mental Health Tech</p>
+        <h3 class="text-2xl font-bold text-white flex items-center gap-2">
+          MendPath – AI Therapist Prototype
+          <a href="https://github.com/Anusha19011901" target="_blank" rel="noopener" class="text-slate-600 hover:text-accent transition-colors">
+            <span class="material-symbols-outlined text-xl">north_east</span>
+          </a>
+        </h3>
+        <p class="text-slate-400 text-sm leading-relaxed max-w-xl">
+          AI-powered mental health prototype leveraging Hume AI's empathic voice and chat interface. Features a dynamic to-do coach for goal tracking, AR overlay in video sessions for an immersive therapeutic environment, and adaptive conversation flows that respond to emotional tone.
+        </p>
+        <div class="flex flex-wrap gap-2 pt-1">
+          <span class="tag">Hume AI</span>
+          <span class="tag">AR</span>
+          <span class="tag">Voice/Chat</span>
+          <span class="tag">React</span>
+          <span class="tag">LLM</span>
+          <span class="tag">WebRTC</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- 05: Retail Analytics -->
+    <article>
+      <div class="w-full rounded-lg overflow-hidden mb-6 relative" style="aspect-ratio:16/7;">
+        <div class="absolute inset-0" style="background: linear-gradient(135deg, #141a12, #121812, #0a0c10)"></div>
+        <div class="absolute inset-0 dot-grid"></div>
+        <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,12,16,0.7), transparent)"></div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="absolute w-80 h-40 rounded-full" style="background: radial-gradient(ellipse, rgba(135,176,154,0.15), transparent 70%); filter: blur(50px);"></div>
+        </div>
+        <svg class="absolute inset-0 w-full h-full opacity-28" viewBox="0 0 720 280">
+          <rect x="120" y="180" width="40" height="80" fill="#87b09a" opacity="0.4" rx="2"/>
+          <rect x="180" y="140" width="40" height="120" fill="#87b09a" opacity="0.45" rx="2"/>
+          <rect x="240" y="100" width="40" height="160" fill="#a899d4" opacity="0.35" rx="2"/>
+          <rect x="300" y="120" width="40" height="140" fill="#87b09a" opacity="0.4" rx="2"/>
+          <rect x="360" y="80" width="40" height="180" fill="#a899d4" opacity="0.4" rx="2"/>
+          <rect x="420" y="110" width="40" height="150" fill="#87b09a" opacity="0.35" rx="2"/>
+          <rect x="480" y="150" width="40" height="110" fill="#87b09a" opacity="0.3" rx="2"/>
+          <rect x="540" y="90" width="40" height="170" fill="#a899d4" opacity="0.35" rx="2"/>
+          <line x1="80" y1="260" x2="640" y2="260" stroke="#87b09a" stroke-width="0.8" opacity="0.3"/>
+        </svg>
+      </div>
+      <div class="space-y-3">
+        <p class="text-xs font-semibold tracking-widest text-slate-500 uppercase">05 / Data Engineering</p>
+        <h3 class="text-2xl font-bold text-white">Retail Inventory &amp; Demand Analytics</h3>
+        <p class="text-slate-400 text-sm leading-relaxed max-w-xl">
+          End-to-end retail analytics pipeline with relational database schemas in MySQL for sales and inventory tracking. Built SQL queries and ETL workflows for KPI reporting. Developed interactive dashboards using Power BI with DAX modeling and implemented demand forecasting and trend analysis pipelines for actionable business insights.
+        </p>
+        <div class="flex flex-wrap gap-2 pt-1">
+          <span class="tag">MySQL</span>
+          <span class="tag">ETL</span>
+          <span class="tag">Power BI</span>
+          <span class="tag">DAX</span>
+          <span class="tag">SQL</span>
+          <span class="tag">Forecasting</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- 06: Patent -->
+    <article>
+      <div class="w-full rounded-lg overflow-hidden mb-6 relative" style="aspect-ratio:16/7;">
+        <div class="absolute inset-0" style="background: linear-gradient(135deg, #160e28, #110c1e, #0a0c10)"></div>
+        <div class="absolute inset-0 dot-grid"></div>
+        <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,12,16,0.7), transparent)"></div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="absolute w-72 h-72 rounded-full" style="background: radial-gradient(ellipse, rgba(168,153,212,0.15), transparent 70%); filter: blur(60px);"></div>
+        </div>
+        <svg class="absolute inset-0 w-full h-full opacity-28" viewBox="0 0 720 280">
+          <path d="M0,140 L150,140 L170,140 L185,80 L195,200 L205,60 L215,220 L230,140 L380,140 L400,140 L415,80 L425,200 L435,60 L445,220 L460,140 L720,140" stroke="#a899d4" stroke-width="2" fill="none"/>
+          <circle cx="205" cy="60" r="5" fill="#a899d4" opacity="0.7"/>
+          <circle cx="435" cy="60" r="5" fill="#87b09a" opacity="0.7"/>
+        </svg>
+      </div>
+      <div class="space-y-3">
+        <p class="text-xs font-semibold tracking-widest text-slate-500 uppercase">06 / Patent · Indian Patent Office</p>
+        <h3 class="text-2xl font-bold text-white">Cardiac Risk Prediction Framework</h3>
+        <p class="text-slate-400 text-sm leading-relaxed max-w-xl">
+          Patent No. 202441004228 (Filed Jan 2024, Published, Under Examination). Developed a hybrid fuzzy-logic framework for cardiac risk prediction using swarm-optimized membership functions and centroid-based defuzzification on clinical attributes. Produced a scalable, interpretable risk-scoring system for clinical decision support.
+        </p>
+        <div class="flex flex-wrap gap-2 pt-1">
+          <span class="tag">Fuzzy Logic</span>
+          <span class="tag">Swarm Optimization</span>
+          <span class="tag">Python</span>
+          <span class="tag">Clinical ML</span>
+          <span class="tag">Statistical Modeling</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- 07: Make Ideas into Motion -->
+    <article>
+      <div class="w-full rounded-lg overflow-hidden mb-6 relative" style="aspect-ratio:16/7;">
+        <div class="absolute inset-0" style="background: linear-gradient(135deg, #0d1e1a, #0d1816, #0a0c10)"></div>
+        <div class="absolute inset-0 dot-grid"></div>
+        <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,12,16,0.7), transparent)"></div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="absolute w-96 h-48 rounded-full" style="background: radial-gradient(ellipse, rgba(135,176,154,0.18), transparent 70%); filter: blur(50px);"></div>
+        </div>
+        <svg class="absolute inset-0 w-full h-full opacity-28" viewBox="0 0 720 280">
+          <rect x="80" y="110" width="140" height="60" rx="8" stroke="#87b09a" stroke-width="1.5" fill="none"/>
+          <text x="150" y="145" text-anchor="middle" fill="#87b09a" font-size="12" font-family="monospace">"Text Input"</text>
+          <line x1="220" y1="140" x2="290" y2="140" stroke="#87b09a" stroke-width="1.5"/>
+          <rect x="290" y="110" width="140" height="60" rx="8" stroke="#a899d4" stroke-width="1.5" fill="none"/>
+          <text x="360" y="145" text-anchor="middle" fill="#a899d4" font-size="12" font-family="monospace">NLP + GAN</text>
+          <line x1="430" y1="140" x2="500" y2="140" stroke="#87b09a" stroke-width="1.5"/>
+          <rect x="500" y="110" width="140" height="60" rx="8" stroke="#87b09a" stroke-width="1.5" fill="none"/>
+          <text x="570" y="145" text-anchor="middle" fill="#87b09a" font-size="12" font-family="monospace">Motion Image</text>
+        </svg>
+      </div>
+      <div class="space-y-3">
+        <p class="text-xs font-semibold tracking-widest text-slate-500 uppercase">07 / Publication · Journal of Software Engineering &amp; Simulation, Vol. 9</p>
+        <h3 class="text-2xl font-bold text-white">Make Ideas into Motion using AI</h3>
+        <p class="text-slate-400 text-sm leading-relaxed max-w-xl">
+          Published research proposing a model to convert textual phrases into moving images, specifically designed to assist individuals with aphantasia (inability to form mental images), particularly those with ADHD. The system combines NLP, deep learning, data augmentation, and GANs to synthesize vivid, animated visual outputs from language.
+        </p>
+        <div class="flex flex-wrap gap-2 pt-1">
+          <span class="tag">NLP</span>
+          <span class="tag">GAN</span>
+          <span class="tag">Deep Learning</span>
+          <span class="tag">Python</span>
+          <span class="tag">TensorFlow</span>
+          <span class="tag">Data Augmentation</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- 08: IoT Security -->
+    <article>
+      <div class="w-full rounded-lg overflow-hidden mb-6 relative" style="aspect-ratio:16/7;">
+        <div class="absolute inset-0" style="background: linear-gradient(135deg, #121418, #101214, #0a0c10)"></div>
+        <div class="absolute inset-0 dot-grid"></div>
+        <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,12,16,0.7), transparent)"></div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="absolute w-64 h-64 rounded-full" style="background: radial-gradient(ellipse, rgba(168,153,212,0.1), transparent 70%); filter: blur(50px);"></div>
+        </div>
+        <svg class="absolute inset-0 w-full h-full opacity-22" viewBox="0 0 720 280">
+          <rect x="320" y="110" width="80" height="60" rx="4" stroke="#a899d4" stroke-width="1.5" fill="none"/>
+          <line x1="240" y1="140" x2="320" y2="140" stroke="#87b09a" stroke-width="1"/>
+          <line x1="400" y1="140" x2="480" y2="140" stroke="#87b09a" stroke-width="1"/>
+          <line x1="360" y1="110" x2="360" y2="60" stroke="#87b09a" stroke-width="1"/>
+          <line x1="360" y1="170" x2="360" y2="220" stroke="#87b09a" stroke-width="1"/>
+          <circle cx="240" cy="140" r="6" stroke="#87b09a" stroke-width="1.5" fill="none"/>
+          <circle cx="480" cy="140" r="6" stroke="#87b09a" stroke-width="1.5" fill="none"/>
+          <circle cx="360" cy="60" r="6" stroke="#a899d4" stroke-width="1.5" fill="none"/>
+          <circle cx="360" cy="220" r="6" stroke="#a899d4" stroke-width="1.5" fill="none"/>
+          <line x1="120" y1="140" x2="234" y2="140" stroke="#87b09a" stroke-width="0.8" stroke-dasharray="4,4"/>
+          <line x1="486" y1="140" x2="600" y2="140" stroke="#87b09a" stroke-width="0.8" stroke-dasharray="4,4"/>
+        </svg>
+      </div>
+      <div class="space-y-3">
+        <p class="text-xs font-semibold tracking-widest text-slate-500 uppercase">08 / Publication · Journal of Software Engineering &amp; Simulation, Vol. 9</p>
+        <h3 class="text-2xl font-bold text-white">Review of Security of IoT Devices</h3>
+        <p class="text-slate-400 text-sm leading-relaxed max-w-xl">
+          Comprehensive review of security vulnerabilities and threat vectors across IoT device ecosystems. Analyzed attack surfaces, authentication mechanisms, firmware security, and network-layer exposures. Proposed a layered security framework for device manufacturers addressing privacy, integrity, and availability across the IoT lifecycle.
+        </p>
+        <div class="flex flex-wrap gap-2 pt-1">
+          <span class="tag">IoT Security</span>
+          <span class="tag">Cybersecurity</span>
+          <span class="tag">Network Security</span>
+          <span class="tag">Threat Modeling</span>
+          <span class="tag">NASSCOM Certified</span>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</main>
+
+<!-- Footer CTA -->
+<footer style="background: #0a0c10; border-top: 1px solid rgba(255,255,255,0.05);">
+  <div class="max-w-[720px] mx-auto px-6 md:px-8 py-20 flex flex-col md:flex-row justify-between gap-12">
+    <div class="max-w-sm">
+      <h2 class="text-2xl font-bold text-white mb-3">Get in touch</h2>
+      <p class="text-slate-400 text-sm leading-relaxed mb-6">
+        Interested in collaboration, research discussions, or full-time roles in data science and software engineering? I'd love to connect.
+      </p>
+      <a href="mailto:anushaseshadri1901@gmail.com" data-copy-email class="font-semibold hover:opacity-80 transition-opacity text-base cursor-pointer" style="color:#87b09a">
+        anushaseshadri1901@gmail.com
+      </a>
+    </div>
+    <div class="flex flex-col gap-3 md:text-right">
+      <p class="text-xs font-semibold tracking-widest text-slate-500 uppercase mb-2">Links</p>
+      <a href="https://github.com/Anusha19011901" target="_blank" rel="noopener" class="text-slate-400 hover:text-white transition-colors text-sm font-medium">GitHub</a>
+      <a href="https://www.linkedin.com/in/anusha-seshadri-9021a3215/" target="_blank" rel="noopener" class="text-slate-400 hover:text-white transition-colors text-sm font-medium">LinkedIn</a>
+      <a href="about.html" class="text-slate-400 hover:text-white transition-colors text-sm font-medium">About</a>
+    </div>
+  </div>
+  <div class="max-w-[720px] mx-auto px-6 md:px-8 pb-10 flex justify-between items-center">
+    <p class="text-slate-700 text-xs">© 2026 Anusha Seshadri</p>
+    <p class="text-slate-700 text-xs">Built with precision.</p>
+  </div>
+</footer>
+
+<script>
+  // ── Scroll progress bar ──────────────────────────────────
+  window.addEventListener('scroll', () => {
+    const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100;
+    document.getElementById('scroll-bar').style.width = pct + '%';
+  }, {passive: true});
+
+  // ── Click-to-copy email ──────────────────────────────────
+  document.querySelectorAll('[data-copy-email]').forEach(el => {
+    el.addEventListener('click', e => {
+      e.preventDefault();
+      navigator.clipboard.writeText('anushaseshadri1901@gmail.com').catch(()=>{});
+      const toast = document.createElement('div');
+      toast.textContent = 'copied! ✓';
+      toast.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(8px);background:#1e293b;color:#87b09a;font-size:13px;font-weight:600;padding:8px 18px;border-radius:999px;border:1px solid rgba(135,176,154,0.3);z-index:9999;opacity:0;transition:all 0.2s ease;pointer-events:none;';
+      document.body.appendChild(toast);
+      requestAnimationFrame(() => { toast.style.opacity='1'; toast.style.transform='translateX(-50%) translateY(0)'; });
+      setTimeout(() => { toast.style.opacity='0'; setTimeout(()=>toast.remove(), 200); }, 2000);
+    });
+  });
+
+  // ── Banner parallax ──────────────────────────────────────
+  const banners = document.querySelectorAll('article > div[style*="aspect-ratio"]');
+  banners.forEach(banner => {
+    const bg = banner.querySelector('div:first-child');
+    if (!bg) return;
+    bg.style.height = '130%';
+    bg.style.top = '-15%';
+    bg.style.bottom = 'auto';
+  });
+  function updateParallax() {
+    banners.forEach(banner => {
+      const bg = banner.querySelector('div:first-child');
+      if (!bg) return;
+      const rect = banner.getBoundingClientRect();
+      const offset = (rect.top + rect.height / 2 - window.innerHeight / 2) * 0.08;
+      bg.style.transform = `translateY(${offset}px)`;
+    });
+  }
+  window.addEventListener('scroll', updateParallax, {passive: true});
+  updateParallax();
+</script>
+</body>
+</html>

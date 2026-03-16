@@ -1,161 +1,629 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Anusha Seshadri | Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "primary": "#87b09a",
+          "accent": "#a899d4",
+          "background-light": "#f6f7f8",
+          "background-dark": "#0d0f14",
+        },
+        fontFamily: { "display": ["Inter", "sans-serif"] },
+        borderRadius: {
+          "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"
+        },
+      },
+    },
+  }
+</script>
+<style>
+  body { font-family: 'Inter', sans-serif; }
+  ::selection { background: rgba(168,153,212,0.4); color: #f1f5f9; }
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+</style>
 </head>
-<body>
+<body class="bg-background-dark text-slate-100 font-display">
+<div id="scroll-bar" style="position:fixed;top:0;left:0;height:2px;width:0%;background:linear-gradient(to right,#87b09a,#a899d4);z-index:9999;pointer-events:none;transition:width 0.08s linear;"></div>
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
 
-  <!-- Navigation -->
-  <nav>
-    <div class="nav-logo">Portfolio</div>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- Hero / About -->
-  <section id="about" class="hero">
-    <div class="hero-content">
-      <h1>Hi, I'm <span class="highlight">Your Name</span></h1>
-      <p class="tagline">Software Developer · Designer · Creator</p>
-      <p class="bio">
-        I build things for the web. Passionate about clean code, great UX,
-        and solving interesting problems.
-      </p>
-      <div class="hero-cta">
-        <a href="#projects" class="btn btn-primary">View My Work</a>
-        <a href="#contact" class="btn btn-outline">Get In Touch</a>
-      </div>
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-800 px-6 md:px-20 py-4 bg-background-dark/80 backdrop-blur-md sticky top-0 z-50">
+  <div class="flex items-center gap-4">
+    <div class="text-primary flex items-center justify-center">
+      <span class="material-symbols-outlined text-3xl">terminal</span>
     </div>
-  </section>
+    <h2 class="text-slate-100 text-lg font-bold leading-tight tracking-tight">Anusha Seshadri</h2>
+  </div>
+  <div class="flex flex-1 justify-end gap-8 items-center">
+    <nav class="hidden md:flex items-center gap-9">
+      <a class="text-primary text-sm font-bold transition-colors" href="index.html">Work</a>
+      <a class="text-slate-400 hover:text-primary text-sm font-medium transition-colors" href="projects.html">Projects</a>
+      <a class="text-slate-400 hover:text-primary text-sm font-medium transition-colors" href="about.html">About</a>
+      <a class="text-slate-400 hover:text-primary text-sm font-medium transition-colors" href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
 
-  <!-- Projects -->
-  <section id="projects">
-    <h2 class="section-title">Projects</h2>
-    <div class="projects-grid">
+<main class="flex flex-col items-center">
+  <div class="max-w-[1200px] w-full px-6 md:px-10">
 
-      <div class="card">
-        <div class="card-header">Project One</div>
-        <p class="card-description">
-          A short description of what this project does and the problem it solves.
-        </p>
-        <div class="card-tags">
-          <span class="tag">HTML</span>
-          <span class="tag">CSS</span>
-          <span class="tag">JavaScript</span>
-        </div>
-        <div class="card-links">
-          <a href="#" class="btn btn-sm">Live Demo</a>
-          <a href="#" class="btn btn-sm btn-outline">GitHub</a>
+    <!-- Hero Section -->
+    <section class="flex flex-col gap-8 py-16 md:py-24 lg:flex-row lg:items-center lg:gap-16">
+      <div class="w-full lg:w-1/2">
+        <div class="aspect-video bg-[#0a0c10] rounded-xl overflow-hidden shadow-2xl shadow-primary/10 border border-slate-800 flex flex-col" id="terminal">
+          <!-- Terminal title bar -->
+          <div class="flex items-center gap-2 px-4 py-3 border-b border-slate-800 bg-[#0d0f14]">
+            <span class="w-3 h-3 rounded-full bg-red-500/70"></span>
+            <span class="w-3 h-3 rounded-full bg-yellow-500/70"></span>
+            <span class="w-3 h-3 rounded-full bg-primary/70"></span>
+            <span class="text-slate-500 text-xs font-mono ml-2">anusha@portfolio ~ </span>
+          </div>
+          <!-- Terminal output -->
+          <div class="flex-1 px-4 py-3 font-mono text-sm overflow-y-auto" id="terminal-output">
+            <p class="text-slate-500 mb-2 text-xs">type <span style="color:#87b09a">help</span> to see what i can do</p>
+          </div>
+          <!-- Terminal input -->
+          <div class="flex items-center gap-2 px-4 py-3 border-t border-slate-800">
+            <span class="text-primary text-sm font-mono">$</span>
+            <input
+              id="terminal-input"
+              type="text"
+              class="flex-1 bg-transparent text-slate-100 text-sm font-mono outline-none caret-primary"
+              placeholder="type a command..."
+              autocomplete="off"
+              spellcheck="false"
+            />
+          </div>
         </div>
       </div>
-
-      <div class="card">
-        <div class="card-header">Project Two</div>
-        <p class="card-description">
-          A short description of what this project does and the problem it solves.
-        </p>
-        <div class="card-tags">
-          <span class="tag">React</span>
-          <span class="tag">Node.js</span>
-          <span class="tag">API</span>
+      <div class="flex flex-col gap-6 lg:w-1/2">
+        <div class="flex flex-col gap-4">
+          <span class="text-primary font-semibold tracking-wider text-sm uppercase">Available for hire · Rochester, NY</span>
+          <h1 class="text-slate-100 text-5xl md:text-6xl font-black leading-tight tracking-tight">
+            AI/ML Engineer & Data Scientist
+          </h1>
+          <p class="text-slate-400 text-lg md:text-xl leading-relaxed max-w-lg">
+            Building ML pipelines, agentic AI systems, and full-stack applications. Passionate about turning messy data into clean, impactful software.
+          </p>
         </div>
-        <div class="card-links">
-          <a href="#" class="btn btn-sm">Live Demo</a>
-          <a href="#" class="btn btn-sm btn-outline">GitHub</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-header">Project Three</div>
-        <p class="card-description">
-          A short description of what this project does and the problem it solves.
-        </p>
-        <div class="card-tags">
-          <span class="tag">Python</span>
-          <span class="tag">SQL</span>
-          <span class="tag">Data</span>
-        </div>
-        <div class="card-links">
-          <a href="#" class="btn btn-sm">Live Demo</a>
-          <a href="#" class="btn btn-sm btn-outline">GitHub</a>
+        <div class="flex flex-wrap gap-4">
+          <a href="#featured-work" class="flex min-w-[140px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-primary text-white text-base font-bold transition-transform active:scale-95 shadow-lg shadow-primary/20">
+            View Projects
+          </a>
+          <a href="about.html" class="flex min-w-[140px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 border-2 border-slate-800 text-slate-300 text-base font-bold hover:bg-slate-800 transition-colors">
+            Read Bio
+          </a>
         </div>
       </div>
+    </section>
 
+    <!-- Featured Work Section -->
+    <section id="featured-work" class="py-12">
+      <div class="flex items-center justify-between mb-8">
+        <h2 class="text-slate-100 text-3xl font-bold tracking-tight">Featured Work</h2>
+        <a class="text-primary font-semibold flex items-center gap-2 hover:gap-3 transition-all" href="https://github.com/Anusha19011901" target="_blank" rel="noopener">
+          All on GitHub <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        <!-- Project 1: NGAFID -->
+        <div class="group flex flex-col gap-4">
+          <div class="relative overflow-hidden rounded-xl aspect-[16/10] bg-slate-900 border border-slate-800 flex items-center justify-center">
+            <div class="absolute inset-0 transition-opacity duration-300 group-hover:opacity-80" style="background: linear-gradient(135deg, rgba(135,176,154,0.25), rgba(135,176,154,0.08))"></div>
+            <div class="relative z-10 text-center px-6">
+              <span class="material-symbols-outlined text-5xl text-primary mb-2 block">flight</span>
+              <p class="text-slate-300 text-sm font-mono">OC-SVM + Neuroevolutionary RNN</p>
+            </div>
+          </div>
+          <div>
+            <p class="text-slate-100 text-xl font-bold mb-1">Predictive Anomaly Detection in NGAFID</p>
+            <p class="text-slate-500 text-sm font-medium uppercase tracking-widest">ML Research • Aviation Safety • PyTorch</p>
+          </div>
+        </div>
+
+        <!-- Project 2: SolAi -->
+        <div class="group flex flex-col gap-4">
+          <div class="relative overflow-hidden rounded-xl aspect-[16/10] bg-slate-900 border border-slate-800 flex items-center justify-center">
+            <div class="absolute inset-0 transition-opacity duration-300 group-hover:opacity-80" style="background: linear-gradient(135deg, rgba(168,153,212,0.25), rgba(168,153,212,0.08))"></div>
+            <div class="relative z-10 text-center px-6">
+              <span class="material-symbols-outlined text-5xl mb-2 block" style="color:#a899d4">auto_awesome</span>
+              <p class="text-slate-300 text-sm font-mono">MCP Servers • ElevenLabs • LLMs</p>
+            </div>
+          </div>
+          <div>
+            <p class="text-slate-100 text-xl font-bold mb-1">SolAi – Workflow Analytics & LLM Integration</p>
+            <p class="text-slate-500 text-sm font-medium uppercase tracking-widest">Agentic AI • Workflow Automation • 2025</p>
+          </div>
+        </div>
+
+        <!-- Project 3: YogiSync -->
+        <div class="group flex flex-col gap-4">
+          <div class="relative overflow-hidden rounded-xl aspect-[16/10] bg-slate-900 border border-slate-800 flex items-center justify-center">
+            <div class="absolute inset-0 transition-opacity duration-300 group-hover:opacity-80" style="background: linear-gradient(135deg, rgba(135,176,154,0.2), rgba(168,153,212,0.12))"></div>
+            <div class="relative z-10 text-center px-6">
+              <span class="material-symbols-outlined text-5xl text-primary mb-2 block">self_improvement</span>
+              <p class="text-slate-300 text-sm font-mono">MediaPipe • LLM • Voice I/O</p>
+            </div>
+          </div>
+          <div>
+            <p class="text-slate-100 text-xl font-bold mb-1">YogiSync – AI Yoga Web App</p>
+            <p class="text-slate-500 text-sm font-medium uppercase tracking-widest">Health Tech • Full-Stack • AI</p>
+          </div>
+        </div>
+
+        <!-- Project 4: MendPath -->
+        <div class="group flex flex-col gap-4">
+          <div class="relative overflow-hidden rounded-xl aspect-[16/10] bg-slate-900 border border-slate-800 flex items-center justify-center">
+            <div class="absolute inset-0 transition-opacity duration-300 group-hover:opacity-80" style="background: linear-gradient(135deg, rgba(168,153,212,0.22), rgba(135,176,154,0.1))"></div>
+            <div class="relative z-10 text-center px-6">
+              <span class="material-symbols-outlined text-5xl mb-2 block" style="color:#a899d4">psychology</span>
+              <p class="text-slate-300 text-sm font-mono">Hume AI • AR • Voice/Chat</p>
+            </div>
+          </div>
+          <div>
+            <p class="text-slate-100 text-xl font-bold mb-1">MendPath – AI Therapist Prototype</p>
+            <p class="text-slate-500 text-sm font-medium uppercase tracking-widest">Mental Health • AR • Hume AI</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 border-t border-slate-800 mt-12">
+      <div class="flex flex-col items-center gap-8 text-center bg-primary/10 rounded-3xl p-12 md:p-20 border border-primary/10">
+        <div class="flex flex-col gap-4 max-w-2xl">
+          <h2 class="text-slate-100 text-4xl md:text-5xl font-black leading-tight tracking-tight">
+            Let's build something remarkable
+          </h2>
+          <p class="text-slate-400 text-lg leading-normal">
+            Open to full-time software engineering and data science roles for 2026. Let's connect.
+          </p>
+        </div>
+        <div class="flex justify-center">
+          <a href="contact.html" id="cta-btn" class="flex min-w-[200px] cursor-pointer items-center justify-center rounded-xl h-14 px-8 bg-primary text-white text-lg font-bold transition-all hover:shadow-xl hover:shadow-primary/30 active:scale-95">
+            Get in Touch
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="px-6 md:px-20 py-12 border-t border-slate-800 bg-background-dark">
+  <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+    <div class="flex items-center gap-3">
+      <span class="material-symbols-outlined text-primary">terminal</span>
+      <span class="text-slate-100 font-bold">Anusha Seshadri</span>
     </div>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills" class="skills-section">
-    <h2 class="section-title">Skills</h2>
-    <div class="skills-grid">
-
-      <div class="skill-group">
-        <h3>Languages</h3>
-        <ul>
-          <li>HTML &amp; CSS</li>
-          <li>JavaScript</li>
-          <li>Python</li>
-        </ul>
-      </div>
-
-      <div class="skill-group">
-        <h3>Frameworks</h3>
-        <ul>
-          <li>React</li>
-          <li>Node.js</li>
-          <li>Express</li>
-        </ul>
-      </div>
-
-      <div class="skill-group">
-        <h3>Tools</h3>
-        <ul>
-          <li>Git &amp; GitHub</li>
-          <li>VS Code</li>
-          <li>Figma</li>
-        </ul>
-      </div>
-
+    <div class="flex gap-8">
+      <a class="text-slate-500 hover:text-primary transition-colors" href="https://github.com/Anusha19011901" target="_blank" rel="noopener" title="GitHub">
+        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.43.372.82 1.102.82 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+      </a>
+      <a class="text-slate-500 hover:text-primary transition-colors" href="mailto:anushaseshadri1901@gmail.com" title="Email" data-copy-email>
+        <span class="material-symbols-outlined">alternate_email</span>
+      </a>
+      <a class="text-slate-500 hover:text-primary transition-colors" href="https://www.linkedin.com/in/anusha-seshadri-9021a3215/" target="_blank" rel="noopener" title="LinkedIn">
+        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+      </a>
     </div>
-  </section>
+    <p class="text-slate-500 text-sm">© 2026 Anusha Seshadri. All rights reserved.</p>
+  </div>
+</footer>
 
-  <!-- Contact -->
-  <section id="contact">
-    <h2 class="section-title">Contact</h2>
-    <p class="contact-subtitle">Have a project in mind or just want to say hi?</p>
-    <form class="contact-form" onsubmit="handleSubmit(event)">
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Your name" required />
-      </div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="your@email.com" required />
-      </div>
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" placeholder="What's on your mind?" required></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary">Send Message</button>
-    </form>
-    <div class="social-links">
-      <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="mailto:you@email.com">Email</a>
-    </div>
-  </section>
+</div>
+</div>
+<script>
+  const input = document.getElementById('terminal-input');
+  const output = document.getElementById('terminal-output');
+  let hintIdx = 0;
+  let cmdCount = 0;
 
-  <footer>
-    <p>&copy; 2026 Your Name. Built with HTML, CSS &amp; JavaScript.</p>
-  </footer>
+  const commands = {
+    help: () => [
+      { text: 'available commands:', color: '#87b09a' },
+      { text: '  whoami       → who am i?' },
+      { text: '  skills       → what can i do?' },
+      { text: '  fun          → something silly' },
+      { text: '  hiring       → are you hiring?' },
+      { text: '  hobbies      → life outside the terminal' },
+      { text: '  contact      → how to reach me' },
+      { text: '  clear        → clean slate' },
+      { text: '  hint         → psst...', color: '#475569' },
+    ],
+    whoami: () => [
+      { text: 'anusha seshadri', color: '#87b09a' },
+      { text: 'AI/ML engineer · data scientist · builder of things' },
+      { text: 'currently @ RIT doing my MS in Data Science' },
+      { text: 'previously: tata elxsi, smartbridge, rit clce' },
+    ],
+    skills: () => [
+      { text: 'top skills (in vibes per second):', color: '#a899d4' },
+      { text: '  ████████████  PyTorch / ML systems' },
+      { text: '  ███████████░  Python / data pipelines' },
+      { text: '  ██████████░░  LLMs / agentic AI' },
+      { text: '  █████████░░░  full-stack (react, flask, node)' },
+      { text: '  ████████░░░░  cloud (aws, gcp, docker)' },
+    ],
+    fun: () => {
+      const jokes = [
+        ['why do ML engineers make great chefs?', 'they know how to batch things.'],
+        ['my model has 94% accuracy.', 'the other 6% is a "creative interpretation".'],
+        ['a SQL query walks into a bar...', '...walks up to two tables and asks "can i join you?"'],
+        ['why did the neural net break up with backprop?', 'too many vanishing gradients.'],
+        ['i have 99 problems', 'and a hyperparameter search caused 98 of them.'],
+      ];
+      const pick = jokes[Math.floor(Math.random() * jokes.length)];
+      return [
+        { text: pick[0], color: '#a899d4' },
+        { text: pick[1] },
+      ];
+    },
+    hiring: () => [
+      { text: 'glad you asked!', color: '#87b09a' },
+      { text: 'yes — actively looking for full-time roles in:' },
+      { text: '  · ML engineering / applied AI' },
+      { text: '  · data science / research engineering' },
+      { text: '  · backend / full-stack with an ML twist' },
+      { text: 'graduating may 2026 · open to relocation', color: '#a899d4' },
+      { text: 'drop a message → contact.html or anushaseshadri1901@gmail.com' },
+    ],
+    hobbies: () => [
+      { text: 'outside the terminal i am:', color: '#87b09a' },
+      { text: '  🎵  music (always)' },
+      { text: '  🎭  theatre & public speaking' },
+      { text: '  📚  reading (mostly at 1am)' },
+      { text: '  🛍️  thrifting connoisseur' },
+      { text: '  🤟  learning ASL storytelling' },
+      { text: '  ✍️  occasional blogger' },
+    ],
+    contact: () => [
+      { text: 'reach me at:', color: '#87b09a' },
+      { text: '  email   → anushaseshadri1901@gmail.com' },
+      { text: '  github  → github.com/Anusha19011901' },
+      { text: '  or just use the contact page :)', color: '#a899d4' },
+    ],
+    hint: () => {
+      const hints = [
+        [{ text: 'hint 1/7:', color: '#a899d4' }, { text: 'there\'s a filesystem around here somewhere... 📁' }],
+        [{ text: 'hint 2/7:', color: '#a899d4' }, { text: 'i heard the developer runs on caffeine. try asking the machine what it runs on.' }],
+        [{ text: 'hint 3/7:', color: '#a899d4' }, { text: 'every repo tells a story. what does this one\'s history look like?' }],
+        [{ text: 'hint 4/7:', color: '#a899d4' }, { text: 'certain files here are... interesting. one of them is encrypted. allegedly.' }],
+        [{ text: 'hint 5/7:', color: '#a899d4' }, { text: 'what does the matrix look like from the inside? 🐇' }],
+        [{ text: 'hint 6/7:', color: '#a899d4' }, { text: 'sudo. you know you want to.' }],
+        [{ text: 'hint 7/7:', color: '#a899d4' }, { text: 'the answer to all of this is probably 42.' }],
+      ];
+      const lines = hints[hintIdx % hints.length];
+      hintIdx++;
+      return [...lines, { text: `(type hint again for the next one — ${hints.length - (hintIdx % hints.length)} remaining)`, color: '#334155' }];
+    },
+    // ── secret commands ──────────────────────────────────────
+    ls: () => [
+      { text: '~/anusha', color: '#87b09a' },
+      { text: '  📁 projects/            (8 items, all bangers)' },
+      { text: '  📄 resume.pdf            (please read)' },
+      { text: '  🔐 secrets.txt           (encrypted... maybe)' },
+      { text: '  ☕ coffee_count.txt       (too large to display)' },
+      { text: '  🧠 brain.py              (overtrained, low validation loss)' },
+      { text: '  🌿 .bashrc               (organised chaos)' },
+      { text: '  📜 todo.txt              (haha)' },
+    ],
+    'cat secrets.txt': () => [
+      { text: 'decrypting...  🔐', color: '#a899d4' },
+      { text: '----------------------------' },
+      { text: 'secret 1: i debug exclusively with print() and feel no shame.' },
+      { text: 'secret 2: my first model had 0.51 accuracy. i named it "coin flip v1".' },
+      { text: 'secret 3: i have a playlist called "coding but make it cottagecore"' },
+      { text: 'secret 4: i have cried at a model training curve. not saying which direction.' },
+      { text: '----------------------------', color: '#475569' },
+    ],
+    'cat todo.txt': () => [
+      { text: 'todo.txt', color: '#87b09a' },
+      { text: '  [x] build cool things' },
+      { text: '  [x] make this terminal' },
+      { text: '  [ ] sleep more' },
+      { text: '  [ ] stop having 47 browser tabs open' },
+      { text: '  [ ] touch grass (scheduled for later)' },
+    ],
+    sudo: () => [
+      { text: 'sudo: permission denied', color: '#f87171' },
+      { text: 'this incident has been reported to: nobody (i\'m just vibing)' },
+      { text: 'try: sudo make me a sandwich', color: '#475569' },
+    ],
+    'sudo make me a sandwich': () => [
+      { text: 'okay.', color: '#87b09a' },
+      { text: '🥪', color: '#87b09a' },
+      { text: '(xkcd reference, you\'re welcome)' },
+    ],
+    42: () => [
+      { text: '42', color: '#87b09a' },
+      { text: 'the answer to life, the universe, and everything.' },
+      { text: 'though the question remains unclear, as always.', color: '#a899d4' },
+    ],
+    coffee: () => [
+      { text: 'brewing...  ☕', color: '#87b09a' },
+      { text: '' },
+      { text: '        )  )  )' },
+      { text: '       (  (  (' },
+      { text: '      __)____)_' },
+      { text: '   .-\'---------|  |' },
+      { text: '  ( C|/\\/\\/\\/\\/|  |' },
+      { text: '   \'-./\\/\\/\\/\\/|  |' },
+      { text: '     \'_______\'  |' },
+      { text: '      \'-------\'' },
+      { text: '' },
+      { text: 'fuel loaded. ready to ship code.', color: '#87b09a' },
+    ],
+    'git log': () => [
+      { text: 'commit a3f9c12  HEAD -> main', color: '#87b09a' },
+      { text: 'Author: Anusha Seshadri <anushaseshadri1901@gmail.com>' },
+      { text: 'Date:   right now' },
+      { text: '    finally fixed that one bug' },
+      { text: '' },
+      { text: 'commit b2e1094' },
+      { text: '    added feature, broke two others, shipped anyway' },
+      { text: '' },
+      { text: 'commit c0ffee00' },
+      { text: '    wip: does not work but the vibes are immaculate' },
+      { text: '' },
+      { text: 'commit deadc0de' },
+      { text: '    initial commit (the hopeful era)' },
+    ],
+    'git blame': () => [
+      { text: 'blame report:', color: '#f87171' },
+      { text: '  100% of bugs traced back to: coffee deficit' },
+      { text: '  recommended fix: more coffee, fewer meetings' },
+    ],
+    matrix: () => {
+      const chars = '01アイウエオカキサシスセタチツテナニヌハヒフヘホ';
+      const rows = Array.from({length: 5}, () =>
+        Array.from({length: 28}, () => chars[Math.floor(Math.random() * chars.length)]).join(' ')
+      );
+      return [
+        { text: 'entering the matrix...', color: '#87b09a' },
+        ...rows.map(r => ({ text: r, color: '#87b09a' })),
+        { text: 'you took the green pill. wise choice.', color: '#a899d4' },
+      ];
+    },
+    python: () => [
+      { text: 'Python 3.12.0 (main) — AnushaOS build', color: '#87b09a' },
+      { text: 'Type "help", "copyright", or just vibe.' },
+      { text: '>>> import torch' },
+      { text: '>>> model = torch.nn.Linear(1, 1)  # humble beginnings' },
+      { text: '>>> print("hello world")' },
+      { text: 'hello world' },
+      { text: '>>> # ok that\'s enough REPL for today' },
+      { text: '>>> exit()', color: '#475569' },
+      { text: '(back to the portfolio you go)', color: '#a899d4' },
+    ],
+    uname: () => [
+      { text: 'AnushaOS v2026.3 LTS (Dark Mode Edition)', color: '#87b09a' },
+      { text: 'Kernel: caffeine-6.2.0-lts' },
+      { text: 'Arch: overthinking-x64' },
+      { text: 'Memory: 16GB RAM + infinite browser tabs' },
+      { text: 'Uptime: running since undergrad, no reboot in sight', color: '#a899d4' },
+    ],
+    vim: () => {
+      setTimeout(() => {
+        printLines([{ text: '  (protip: to exit, type :q! or close the laptop and cry)', color: '#a899d4' }]);
+      }, 2000);
+      return [
+        { text: '-- INSERT MODE --', color: '#f87171' },
+        { text: '' },
+        { text: '  brain.py  [Modified]' },
+        { text: '  ~~~' },
+        { text: '  ~~~  # TODO: figure out life' },
+        { text: '  ~~~' },
+        { text: '  \"brain.py\" 847L, 29103C' },
+      ];
+    },
+    hello: () => [
+      { text: 'hey! 👋', color: '#87b09a' },
+      { text: 'glad you stopped by. type help to look around.' },
+    ],
+    hi: () => commands.hello(),
+    date: () => [
+      { text: new Date().toLocaleString('en-US', { weekday:'long', year:'numeric', month:'long', day:'numeric', hour:'2-digit', minute:'2-digit' }), color: '#87b09a' },
+      { text: 'another day, another gradient descent.' },
+    ],
+    rickroll: () => {
+      setTimeout(() => window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank'), 400);
+      return [
+        { text: 'never gonna give you up...', color: '#a899d4' },
+        { text: 'never gonna let you down...', color: '#87b09a' },
+        { text: 'never gonna run around and desert you 🎵' },
+        { text: '(you\'ve been rickrolled. classic.)', color: '#475569' },
+      ];
+    },
+    // ─────────────────────────────────────────────────────────
+    clear: () => {
+      output.innerHTML = '<p class="text-slate-500 mb-2 text-xs">type <span style="color:#87b09a">help</span> to see what i can do</p>';
+      return null;
+    },
+  };
 
-  <script src="main.js"></script>
+  function printLines(lines) {
+    if (!lines) return;
+    lines.forEach(line => {
+      const p = document.createElement('p');
+      p.className = 'leading-relaxed';
+      p.style.color = line.color || 'rgb(148 163 184)';
+      p.textContent = line.text;
+      output.appendChild(p);
+    });
+    output.scrollTop = output.scrollHeight;
+  }
+
+  function runCommand(raw) {
+    const cmd = raw.trim().toLowerCase();
+
+    // echo the command
+    const echo = document.createElement('p');
+    echo.className = 'text-slate-100 mt-2';
+    echo.innerHTML = `<span style="color:#87b09a">$</span> ${raw}`;
+    output.appendChild(echo);
+
+    if (!cmd) return;
+
+    if (commands[cmd]) {
+      const result = commands[cmd]();
+      printLines(result);
+    } else {
+      const unixLike = ['pwd','grep','find','mkdir','touch','echo','curl','wget','ssh','cd','cp','mv','man','top','ps','kill','chmod','env','which','alias'].includes(cmd.split(' ')[0]);
+      printLines([{ text: `command not found: ${cmd}${unixLike ? ' — unix-y, i like it. try hint 😏' : ' — try \'help\''}`, color: '#f87171' }]);
+    }
+
+    // auto-whisper after 3rd real command
+    cmdCount++;
+    if (cmdCount === 3) {
+      setTimeout(() => {
+        const p = document.createElement('p');
+        p.style.color = '#334155';
+        p.style.fontSize = '0.75rem';
+        p.style.marginTop = '8px';
+        p.textContent = 'psst: type hint for clues 🤫';
+        output.appendChild(p);
+        output.scrollTop = output.scrollHeight;
+      }, 600);
+    }
+
+    output.scrollTop = output.scrollHeight;
+  }
+
+  input.addEventListener('keydown', e => {
+    if (e.key === 'Enter') {
+      runCommand(input.value);
+      input.value = '';
+    }
+  });
+
+  // auto-focus terminal on click anywhere in it
+  document.getElementById('terminal').addEventListener('click', () => input.focus());
+
+  // boot message
+  const hour = new Date().getHours();
+  const greeting = hour < 5 ? 'burning the midnight oil, huh?  🕯️' :
+                   hour < 12 ? 'good morning  ☀️' :
+                   hour < 17 ? 'good afternoon  🌿' :
+                   hour < 21 ? 'good evening  🌙' : 'still up?  ✨';
+  setTimeout(() => {
+    printLines([
+      { text: 'welcome to anusha\'s terminal  ✦', color: '#87b09a' },
+      { text: greeting, color: 'rgb(100 116 139)' },
+      { text: 'type help to get started', color: 'rgb(100 116 139)' },
+    ]);
+  }, 300);
+
+  // ── Konami Code easter egg ─────────────────────────────────
+  const konamiSeq = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a'];
+  let konamiIdx = 0;
+  document.addEventListener('keydown', e => {
+    konamiIdx = e.key === konamiSeq[konamiIdx] ? konamiIdx + 1 : (e.key === konamiSeq[0] ? 1 : 0);
+    if (konamiIdx === konamiSeq.length) {
+      konamiIdx = 0;
+      const toast = document.createElement('div');
+      toast.innerHTML = `
+        <div style="display:flex;align-items:center;gap:14px;">
+          <span style="font-size:28px;">🏆</span>
+          <div>
+            <div style="font-size:10px;text-transform:uppercase;letter-spacing:2px;color:#a899d4;font-weight:700;margin-bottom:2px;">Achievement Unlocked</div>
+            <div style="font-size:15px;font-weight:700;color:#f1f5f9;">you know the konami code</div>
+            <div style="font-size:11px;color:#64748b;margin-top:2px;">↑↑↓↓←→←→BA — a timeless classic 🕹️</div>
+          </div>
+        </div>`;
+      toast.style.cssText = 'position:fixed;bottom:32px;right:32px;z-index:9999;background:#111827;border:1px solid rgba(168,153,212,0.35);border-radius:12px;padding:16px 20px;box-shadow:0 8px 32px rgba(0,0,0,0.6);animation:toastIn 0.4s cubic-bezier(.34,1.56,.64,1);max-width:300px;';
+      const css = document.createElement('style');
+      css.textContent = '@keyframes toastIn{from{transform:translateX(120%);opacity:0}to{transform:translateX(0);opacity:1}}@keyframes toastOut{from{transform:translateX(0);opacity:1}to{transform:translateX(120%);opacity:0}}';
+      document.head.appendChild(css);
+      document.body.appendChild(toast);
+      setTimeout(() => { toast.style.animation='toastOut 0.3s ease forwards'; setTimeout(()=>toast.remove(),300); }, 4500);
+    }
+  });
+
+  // ── Browser console easter egg ─────────────────────────────
+  console.log('\n%c  ✦  ', 'font-size:36px;color:#87b09a;background:#0d0f14;border-radius:6px;padding:6px 16px;');
+  console.log('%c hey, you found the console 👀', 'font-size:16px;font-weight:700;color:#87b09a;');
+  console.log('%c curious minds are welcome here.\n→ github.com/Anusha19011901', 'font-size:13px;color:#a899d4;line-height:1.8;');
+  console.log('%c psst: try the konami code on this page 🕹️', 'font-size:11px;color:#475569;');
+
+  // ── Scroll progress bar ────────────────────────────────────
+  window.addEventListener('scroll', () => {
+    const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100;
+    document.getElementById('scroll-bar').style.width = pct + '%';
+  }, {passive: true});
+
+  // ── Click-to-copy email ────────────────────────────────────
+  function showCopyToast() {
+    const toast = document.createElement('div');
+    toast.textContent = 'copied! ✓';
+    toast.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(8px);background:#1e293b;color:#87b09a;font-size:13px;font-weight:600;padding:8px 18px;border-radius:999px;border:1px solid rgba(135,176,154,0.3);z-index:9999;opacity:0;transition:all 0.2s ease;pointer-events:none;';
+    document.body.appendChild(toast);
+    requestAnimationFrame(() => { toast.style.opacity='1'; toast.style.transform='translateX(-50%) translateY(0)'; });
+    setTimeout(() => { toast.style.opacity='0'; setTimeout(()=>toast.remove(), 200); }, 2000);
+  }
+  document.querySelectorAll('[data-copy-email]').forEach(el => {
+    el.addEventListener('click', e => {
+      e.preventDefault();
+      navigator.clipboard.writeText('anushaseshadri1901@gmail.com').catch(()=>{});
+      showCopyToast();
+    });
+  });
+
+  // ── CTA confetti ───────────────────────────────────────────
+  function launchConfetti(ox, oy) {
+    const canvas = document.createElement('canvas');
+    canvas.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9998;';
+    canvas.width = window.innerWidth; canvas.height = window.innerHeight;
+    document.body.appendChild(canvas);
+    const ctx = canvas.getContext('2d');
+    const colors = ['#87b09a','#a899d4','#b5ccbe','#c4b8e4','#f1f5f9','#6ee7b7'];
+    const particles = Array.from({length: 90}, () => ({
+      x: ox, y: oy,
+      vx: (Math.random()-0.5)*16, vy: -Math.random()*14-3,
+      w: Math.random()*10+4, h: Math.random()*5+2,
+      color: colors[Math.floor(Math.random()*colors.length)],
+      rot: Math.random()*360, rotV: (Math.random()-0.5)*12, alpha: 1,
+    }));
+    (function tick() {
+      ctx.clearRect(0,0,canvas.width,canvas.height);
+      let alive = false;
+      particles.forEach(p => {
+        p.vy += 0.45; p.vx *= 0.98; p.x += p.vx; p.y += p.vy;
+        p.rot += p.rotV; p.alpha -= 0.014;
+        if (p.alpha > 0) {
+          alive = true;
+          ctx.save(); ctx.globalAlpha = p.alpha;
+          ctx.translate(p.x, p.y); ctx.rotate(p.rot*Math.PI/180);
+          ctx.fillStyle = p.color;
+          ctx.fillRect(-p.w/2, -p.h/2, p.w, p.h);
+          ctx.restore();
+        }
+      });
+      if (alive) requestAnimationFrame(tick); else canvas.remove();
+    })();
+  }
+  document.getElementById('cta-btn').addEventListener('click', function(e) {
+    e.preventDefault();
+    const r = this.getBoundingClientRect();
+    launchConfetti(r.left + r.width/2, r.top + r.height/2);
+    setTimeout(() => window.location.href = 'contact.html', 650);
+  });
+</script>
 </body>
 </html>
