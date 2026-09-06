@@ -1,328 +1,155 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>About | Anusha Seshadri</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-  tailwind.config = {
-    darkMode: "class",
-    theme: {
-      extend: {
-        colors: {
-          "primary": "#87b09a",
-          "accent": "#a899d4",
-          "background-light": "#f6f7f8",
-          "background-dark": "#0d0f14",
-        },
-        fontFamily: { "display": ["Inter", "sans-serif"] },
-        borderRadius: {
-          "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"
-        },
-      },
-    },
-  }
-</script>
-<style>
-  body { font-family: 'Inter', sans-serif; }
-  ::selection { background: rgba(168,153,212,0.4); color: #f1f5f9; }
-  .material-symbols-outlined {
-    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-  }
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>About — Anusha Seshadri</title>
+<meta name="description" content="About Anusha Seshadri — AI Engineer at Digestive Disease Care, formerly AI/ML Research Scientist at RIT. Deep learning, generative AI, healthcare interoperability."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DotGothic16&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
 </head>
-<body class="bg-background-dark font-display text-slate-100 antialiased">
-<div id="scroll-bar" style="position:fixed;top:0;left:0;height:2px;width:0%;background:linear-gradient(to right,#87b09a,#a899d4);z-index:9999;pointer-events:none;transition:width 0.08s linear;"></div>
-<div class="relative flex min-h-screen flex-col">
+<body>
 
-  <header class="sticky top-0 z-50 w-full border-b border-slate-800 bg-background-dark/80 backdrop-blur-md">
-    <div class="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-      <div class="flex items-center gap-2">
-        <div class="text-primary">
-          <span class="material-symbols-outlined text-3xl">terminal</span>
+<header class="nav">
+  <div class="wrap nav__in">
+    <a class="nav__brand" href="index.html">Anusha Seshadri</a>
+    <nav aria-label="primary"><ul class="nav__links">
+      <li><a href="projects.html">Work</a></li>
+      <li><a href="about.html" aria-current="page">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></nav>
+    <div class="nav__tools">
+      <a class="btn btn--sm" href="resume.html">Résumé</a>
+      <button class="btn btn--sm btn--ink" type="button" data-term title="press ` anywhere">Terminal ▸</button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section>
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>About</p>
+      <h1 class="h-section" data-reveal style="--i:1">Anusha<br/>Seshadri</h1>
+
+      <div class="sheet">
+        <div class="sheet__side">
+          <figure class="portrait" data-reveal style="--i:2">
+            <span class="portrait__tag">Profile</span>
+            <img src="anusha.webp" alt="Anusha Seshadri in an RIT hockey jersey at night" loading="eager"/>
+          </figure>
+
+          <div class="profile" data-reveal style="--i:3">
+            <p class="eyebrow">Profile</p>
+            <p class="lede" style="margin-top:.8rem;font-size:1.05rem">AI Engineer at Digestive Disease Care in New York City, leading the AI and data science function across claims, revenue cycle, and interoperability. M.S. in Data Science from Rochester Institute of Technology; B.Tech in Computer Science from Vellore Institute of Technology.</p>
+            <p style="margin-top:.9rem;font-size:.95rem">Holder of an Indian patent for an AI-driven clinical risk prediction framework, with two peer-reviewed publications and an MSR 2026 Mining Challenge study. Foundations in Python, PyTorch, and CUDA, with experience on large-scale sensor and imaging-adjacent datasets in multidisciplinary research settings — and a preference for problems where the data is messy, the stakes are real, and the answer has to be both rigorous and interpretable.</p>
+            <p class="mono mute" style="font-size:.78rem;letter-spacing:.08em;margin-top:1rem">Outside work: music · theatre and public speaking · ASL storytelling · reading · thrifting · writing</p>
+          </div>
         </div>
-        <span class="text-lg font-bold tracking-tight">Anusha Seshadri</span>
+
+        <div>
+          <p class="eyebrow" data-reveal style="--i:2">Experience</p>
+          <h2 class="h-section" data-reveal style="--i:2;font-size:clamp(2rem,4vw,3.2rem)">Career</h2>
+<div class="tl" data-reveal style="--i:3">
+        <div class="tl__item">
+          <div class="tl__head"><span class="tl__role">AI Engineer</span><span class="tl__org">Digestive Disease Care · NYC</span><span class="tl__date">Jun 2026 — Present</span></div>
+          <ul>
+            <li>Leading an AI and data science initiative focused on claims and revenue-cycle operations — a denial-prediction model, automated insurance verification at intake, and payer performance analytics — in active discovery with billing and clinical teams.</li>
+            <li>Scoping an interoperability layer to standardise payer data exchange, evaluating HL7 FHIR-based integration with the practice's Epic environment for real-time eligibility checks and cost estimation.</li>
+            <li>Designing an OCR-based insurance-card intake pipeline paired with historical billing data to generate pre-visit out-of-pocket cost estimates for patients.</li>
+            <li>One of two founding members of DDC's AI/Data Science function, positioned to lead the team as it scopes and hires additional engineers.</li>
+          </ul>
+        </div>
+        <div class="tl__item">
+          <div class="tl__head"><span class="tl__role">AI/ML Research Scientist</span><span class="tl__org">Rochester Institute of Technology · NGAFID</span><span class="tl__date">Jan 2025 — May 2026</span></div>
+          <ul>
+            <li>Developed and applied deep learning methods to large-scale sensor and time-series data, building and optimising computational approaches for anomaly detection and pattern recognition on real-world operational datasets from the NGAFID aviation database.</li>
+            <li>Designed, built, and trained models with PyTorch and CUDA on NVIDIA GPU — training 10,000+ neural network architectures in parallel via neuroevolutionary search (EXAMM) — with rigorous quantitative analysis and statistical validation.</li>
+          </ul>
+        </div>
+        <div class="tl__item">
+          <div class="tl__head"><span class="tl__role">Graduate Assistant</span><span class="tl__org">Center for Leadership and Civic Engagement · RIT</span><span class="tl__date">Aug 2025 — May 2026</span></div>
+          <ul>
+            <li>Applied generative AI and foundation-model approaches (Anthropic Claude API) to develop new computational methods for workflow automation, contributing reusable AI patterns and integrating AI capabilities into research and operational workflows with cross-functional teams.</li>
+          </ul>
+        </div>
+        <div class="tl__item">
+          <div class="tl__head"><span class="tl__role">Data Science Intern</span><span class="tl__org">Tata Elxsi</span><span class="tl__date">Dec 2023 — Feb 2024</span></div>
+          <ul>
+            <li>Developed and applied machine learning methods to large-scale sensor and behavioural datasets — classification, anomaly detection, and pattern recognition — improving system efficiency by 15% and reducing errors by 20% in a multidisciplinary engineering environment.</li>
+          </ul>
+        </div>
+        <div class="tl__item">
+          <div class="tl__head"><span class="tl__role">Applied Data Science Intern</span><span class="tl__org">SmartBridge · Google Developers</span><span class="tl__date">May 2023 — Jul 2023</span></div>
+          <ul>
+            <li>Designed and deployed deep-learning-based prediction pipelines from data ingestion through model serving, applying neural network architectures and generative-AI-adjacent modelling in a research-to-production workflow.</li>
+          </ul>
+        </div>
       </div>
-      <nav class="flex items-center gap-8">
-        <div class="hidden md:flex items-center gap-8">
-          <a class="text-sm font-medium hover:text-primary transition-colors" href="index.html">Work</a>
-          <a class="text-sm font-medium hover:text-primary transition-colors" href="projects.html">Projects</a>
-          <a class="text-sm font-bold text-primary" href="about.html">About</a>
-          <a class="text-sm font-medium hover:text-primary transition-colors" href="contact.html">Contact</a>
         </div>
-      </nav>
-    </div>
-  </header>
-
-  <main class="flex-grow">
-    <div class="mx-auto max-w-3xl px-6 py-16 md:py-24">
-
-      <!-- Hero Section -->
-      <section class="flex flex-col items-center text-center mb-16">
-        <div class="mb-8 relative">
-          <div class="size-32 rounded-full overflow-hidden ring-4 ring-primary/20">
-            <img src="IMG_2670.JPG" alt="Anusha Seshadri" class="w-full h-full object-cover object-top"/>
-          </div>
-        </div>
-        <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">Anusha Seshadri</h1>
-        <p class="text-xl text-slate-400 font-medium">AI/ML Engineer &amp; Data Scientist</p>
-        <div class="mt-4 flex items-center gap-2 text-slate-500">
-          <span class="material-symbols-outlined text-sm">location_on</span>
-          <span class="text-sm">Based in Rochester, NY</span>
-        </div>
-      </section>
-
-      <!-- About Bio -->
-      <section class="mb-20">
-        <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
-          <span class="w-8 h-px bg-primary/40"></span>
-          About Me
-        </h2>
-        <div class="space-y-6 text-lg leading-relaxed text-slate-300">
-          <p>
-            I'm an AI/ML Engineer and Data Scientist who builds intelligent systems — from neuroevolutionary anomaly detectors and agentic LLM pipelines to computer vision apps and clinical prediction models. My work sits at the intersection of machine learning research and production engineering.
-          </p>
-          <p>
-            Currently pursuing my MS in Data Science at RIT, I'm drawn to problems where data is messy, the stakes are real, and the solution requires both rigorous modeling and clean architecture. I care about building things that are not just accurate, but interpretable, scalable, and impactful.
-          </p>
-        </div>
-      </section>
-
-      <!-- Experience -->
-      <section class="mb-20">
-        <h2 class="text-2xl font-bold mb-8 flex items-center gap-3">
-          <span class="w-8 h-px bg-primary/40"></span>
-          Experience
-        </h2>
-        <div class="space-y-10">
-
-          <div class="relative pl-8 border-l border-slate-800">
-            <div class="absolute -left-[5px] top-0 h-2.5 w-2.5 rounded-full bg-primary"></div>
-            <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
-              <h3 class="text-lg font-bold">Graduate Assistant</h3>
-              <span class="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full mt-2 md:mt-0 w-fit">Aug '24 — Present</span>
-            </div>
-            <p class="text-slate-400 font-medium mb-3">Center for Leadership and Civic Engagement · RIT</p>
-            <ul class="text-slate-300 space-y-1 list-disc list-inside text-sm leading-relaxed">
-              <li>Built SQL-driven KPI dashboards and automated Python reporting pipelines to streamline program performance tracking.</li>
-              <li>Coordinating university website management, program design, and communications for university-wide leadership initiatives.</li>
-              <li>Resolved data integrity and performance issues while collaborating cross-functionally on stakeholder-driven solutions.</li>
-            </ul>
-          </div>
-
-          <div class="relative pl-8 border-l border-slate-800">
-            <div class="absolute -left-[5px] top-0 h-2.5 w-2.5 rounded-full bg-slate-700"></div>
-            <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
-              <h3 class="text-lg font-bold">Data Science Intern</h3>
-              <span class="text-sm font-medium text-slate-500 bg-slate-800 px-3 py-1 rounded-full mt-2 md:mt-0 w-fit">Dec '23 — Feb '24</span>
-            </div>
-            <p class="text-slate-400 font-medium mb-3">TATA ELXSI · Trivandrum</p>
-            <ul class="text-slate-300 space-y-1 list-disc list-inside text-sm leading-relaxed">
-              <li>Led development of telemetry data processing pipelines in Python and Spark within a distributed engineering environment.</li>
-              <li>Owned sprint-level implementation of feature engineering modules, ensuring timely integration and deployment.</li>
-              <li>Diagnosed and optimized performance issues in data workflows, improving operational efficiency by 15%.</li>
-              <li>Collaborated in Agile ceremonies including sprint planning, estimation, and technical documentation.</li>
-            </ul>
-          </div>
-
-          <div class="relative pl-8 border-l border-slate-800">
-            <div class="absolute -left-[5px] top-0 h-2.5 w-2.5 rounded-full bg-slate-700"></div>
-            <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
-              <h3 class="text-lg font-bold">Applied Data Science Intern</h3>
-              <span class="text-sm font-medium text-slate-500 bg-slate-800 px-3 py-1 rounded-full mt-2 md:mt-0 w-fit">May '23 — Jul '23</span>
-            </div>
-            <p class="text-slate-400 font-medium mb-3">Smartbridge Google Developers · India</p>
-            <ul class="text-slate-300 space-y-1 list-disc list-inside text-sm leading-relaxed">
-              <li>Developed backend services in Python (Flask) and frontend components using JavaScript, HTML, and CSS.</li>
-              <li>Implemented CI/CD automation using GitHub Actions and deployed Dockerized services to IBM Cloud / AWS.</li>
-              <li>Identified performance bottlenecks in database queries and optimized SQL pipelines, improving response time.</li>
-              <li>Participated in architecture discussions to define REST API contracts and applied secure coding practices.</li>
-            </ul>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- Education -->
-      <section class="mb-20">
-        <h2 class="text-2xl font-bold mb-8 flex items-center gap-3">
-          <span class="w-8 h-px bg-primary/40"></span>
-          Education
-        </h2>
-        <div class="space-y-8">
-          <div class="relative pl-8 border-l border-slate-800">
-            <div class="absolute -left-[5px] top-0 h-2.5 w-2.5 rounded-full bg-primary"></div>
-            <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
-              <h3 class="text-lg font-bold">MS – Data Science</h3>
-              <span class="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full mt-2 md:mt-0 w-fit">Aug '24 — May '26</span>
-            </div>
-            <p class="text-slate-400 font-medium">Rochester Institute of Technology, Rochester, NY</p>
-          </div>
-          <div class="relative pl-8 border-l border-slate-800">
-            <div class="absolute -left-[5px] top-0 h-2.5 w-2.5 rounded-full bg-slate-700"></div>
-            <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
-              <h3 class="text-lg font-bold">B.Tech – Computer Science &amp; Engineering</h3>
-              <span class="text-sm font-medium text-slate-500 bg-slate-800 px-3 py-1 rounded-full mt-2 md:mt-0 w-fit">Sep '20 — Jun '24</span>
-            </div>
-            <p class="text-slate-400 font-medium">Vellore Institute of Technology · Specialization: Information Security</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Skills -->
-      <section>
-        <h2 class="text-2xl font-bold mb-10 flex items-center gap-3">
-          <span class="w-8 h-px bg-primary/40"></span>
-          Technical Skills
-        </h2>
-        <div class="space-y-8">
-
-          <div>
-            <h4 class="text-xs font-bold uppercase tracking-widest mb-3" style="color:#87b09a">Languages</h4>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">Python</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">Java (JDK 8+)</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">JavaScript / TypeScript</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">SQL</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">C / C++</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">Scala</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">Swift</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">HTML5 / CSS3</span>
-            </div>
-          </div>
-
-          <div>
-            <h4 class="text-xs font-bold uppercase tracking-widest mb-3" style="color:#a899d4">ML / AI</h4>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">PyTorch</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">TensorFlow</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">Keras</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">Transformers</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">LangChain</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">LLMs</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">Agentic AI</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">NLP</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">Anomaly Detection</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">Neuroevolution</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">Recommender Systems</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">Causal Inference</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">Graph Neural Networks</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">Ranking Models</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">MATLAB</span>
-            </div>
-          </div>
-
-          <div>
-            <h4 class="text-xs font-bold uppercase tracking-widest mb-3" style="color:#87b09a">Cloud & DevOps</h4>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">AWS (S3, EC2, Lambda)</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">GCP (BigQuery)</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">Azure</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">Docker</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">CUDA</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">GitHub Actions</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">CI/CD</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">Maven</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">Gradle</span>
-            </div>
-          </div>
-
-          <div>
-            <h4 class="text-xs font-bold uppercase tracking-widest mb-3" style="color:#a899d4">Data Engineering & Distributed Systems</h4>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">Apache Spark</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">Kafka</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">Hadoop</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">Snowflake</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">BigQuery</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">MySQL</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">SQL Server</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">Airflow</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">ETL Pipelines</span>
-            </div>
-          </div>
-
-          <div>
-            <h4 class="text-xs font-bold uppercase tracking-widest mb-3" style="color:#87b09a">Frameworks & Dev Tools</h4>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">Spring Boot</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">Flask</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">FastAPI</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">Node.js</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">React</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">React Native (Expo)</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">Django</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">Weights & Biases</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">IBM Watson</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">Power BI</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">Looker</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">Salesforce</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">Figma</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">Git</span>
-            </div>
-          </div>
-
-          <div>
-            <h4 class="text-xs font-bold uppercase tracking-widest mb-3" style="color:#a899d4">Architecture & Testing</h4>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">Microservices</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">REST APIs</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">Serverless Computing</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">Agile / Scrum</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">JUnit 5</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">PyTest</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">Unit Testing</span>
-              <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-lg text-sm font-medium">Integration Testing</span>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-    </div>
-  </main>
-
-  <footer class="border-t border-slate-800 py-12">
-    <div class="mx-auto max-w-5xl px-6 flex flex-col md:flex-row justify-between items-center gap-6">
-      <p class="text-sm text-slate-400">© 2026 Anusha Seshadri. Built with precision.</p>
-      <div class="flex gap-6">
-        <a class="text-slate-500 hover:text-primary transition-colors" href="https://github.com/Anusha19011901" target="_blank" rel="noopener">
-          <span class="sr-only">GitHub</span>
-          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.43.372.82 1.102.82 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-        </a>
-        <a class="text-slate-500 hover:text-primary transition-colors" href="https://www.linkedin.com/in/anusha-seshadri-9021a3215/" target="_blank" rel="noopener">
-          <span class="sr-only">LinkedIn</span>
-          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
-        <a class="text-slate-500 hover:text-primary transition-colors" href="mailto:anushaseshadri1901@gmail.com" data-copy-email title="Copy email">
-          <span class="sr-only">Email</span>
-          <span class="material-symbols-outlined text-xl">alternate_email</span>
-        </a>
       </div>
     </div>
-  </footer>
+  </section>
 
-</div>
-<script>
-  window.addEventListener('scroll', () => {
-    const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100;
-    document.getElementById('scroll-bar').style.width = pct + '%';
-  }, {passive: true});
-  document.querySelectorAll('[data-copy-email]').forEach(el => {
-    el.addEventListener('click', e => {
-      e.preventDefault();
-      navigator.clipboard.writeText('anushaseshadri1901@gmail.com').catch(()=>{});
-      const toast = document.createElement('div');
-      toast.textContent = 'copied! ✓';
-      toast.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(8px);background:#1e293b;color:#87b09a;font-size:13px;font-weight:600;padding:8px 18px;border-radius:999px;border:1px solid rgba(135,176,154,0.3);z-index:9999;opacity:0;transition:all 0.2s ease;pointer-events:none;';
-      document.body.appendChild(toast);
-      requestAnimationFrame(() => { toast.style.opacity='1'; toast.style.transform='translateX(-50%) translateY(0)'; });
-      setTimeout(() => { toast.style.opacity='0'; setTimeout(()=>toast.remove(), 200); }, 2000);
-    });
-  });
-</script>
+  <!-- ═══════════ EDUCATION ═══════════ -->
+  <section class="section--tight rule-top">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>Education</p>
+      <div class="panels" style="margin-top:1.2rem">
+        <div class="panel panel--shadow s6" data-reveal style="--i:1"><div class="panel__in">
+          <span class="tcard__ep">2024 — 2026</span>
+          <h3 class="tcard__title" style="font-size:1.8rem;margin:.3rem 0">M.S. · Data Science</h3>
+          <p class="mono mute" style="font-size:.8rem;letter-spacing:.08em">Rochester Institute of Technology · Rochester, NY</p>
+        </div></div>
+        <div class="panel s6" data-reveal style="--i:2"><div class="panel__in">
+          <span class="tcard__ep">2020 — 2024</span>
+          <h3 class="tcard__title" style="font-size:1.8rem;margin:.3rem 0">B.Tech · Computer Science &amp; Engineering</h3>
+          <p class="mono mute" style="font-size:.8rem;letter-spacing:.08em">Vellore Institute of Technology · specialisation: Information Security</p>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ SKILLS ═══════════ -->
+  <section class="rule-top">
+    <div class="wrap">
+      <h2 class="h-section" data-reveal><span class="sub">Technical skills</span>Skills</h2>
+      <div class="skillgrid" style="margin-top:1.5rem">
+        <div class="panel" data-reveal style="--i:0"><div class="panel__in"><h4>Healthcare &amp; interoperability</h4><ul><li>HL7 FHIR</li><li>Epic</li><li>EHR / payer integration</li><li>Insurance claims analytics</li><li>Denial prediction</li><li>Revenue cycle analytics</li><li>OCR pipelines</li><li>HIPAA · SHIELD Act compliance</li></ul></div></div>
+        <div class="panel" data-reveal style="--i:1"><div class="panel__in"><h4>Deep learning &amp; computer vision</h4><ul><li>PyTorch</li><li>TensorFlow</li><li>Keras</li><li>CNNs · RNNs · Transformers</li><li>Image recognition</li><li>Segmentation</li><li>Pose estimation</li><li>Skeletal keypoint extraction</li><li>Object detection</li><li>OpenCV</li><li>MediaPipe</li></ul></div></div>
+        <div class="panel" data-reveal style="--i:2"><div class="panel__in"><h4>Generative AI</h4><ul><li>GANs</li><li>Diffusion models (foundations)</li><li>Foundation models</li><li>Multimodal models</li><li>LLMs</li><li>Anthropic Claude API</li><li>OpenAI</li><li>LangChain · LangGraph</li><li>RAG pipelines</li></ul></div></div>
+        <div class="panel" data-reveal style="--i:3"><div class="panel__in"><h4>Quantitative &amp; ML</h4><ul><li>Statistical modelling</li><li>Feature engineering</li><li>Anomaly detection</li><li>Causal inference</li><li>Probabilistic modelling</li><li>Scikit-learn</li><li>Neuroevolution</li><li>Fuzzy logic</li><li>PSO optimisation</li><li>Explainable AI</li><li>Qiskit (quantum kernels, Grover, QKD)</li></ul></div></div>
+        <div class="panel" data-reveal style="--i:4"><div class="panel__in"><h4>Infrastructure</h4><ul><li>CUDA · NVIDIA GPU</li><li>Docker</li><li>GitHub Actions · CI/CD</li><li>AWS (S3, EC2, Lambda)</li><li>GCP</li><li>Apache Spark</li><li>Weights &amp; Biases</li><li>Experiment tracking</li></ul></div></div>
+        <div class="panel" data-reveal style="--i:5"><div class="panel__in"><h4>Languages &amp; research</h4><ul><li>Python</li><li>SQL</li><li>Java</li><li>TypeScript · JavaScript</li><li>C++</li><li>Scala</li><li>Peer-reviewed publication</li><li>Patent author</li><li>Reproducible research</li></ul></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="next section--tight">
+    <div class="wrap row sp">
+      <div>
+        <p class="eyebrow" data-reveal>Get in touch</p>
+        <p class="next__lines" data-reveal style="--i:1"><span>Questions about the work? <span class="cut">Let's talk.</span></span></p>
+      </div>
+      <a class="btn btn--red" href="contact.html" data-reveal style="--i:2" data-cursor="HI">Contact</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__in">
+    <p class="footer__note">© 2026 Anusha Seshadri</p>
+    <div class="footer__links">
+      <a href="https://github.com/Anusha19011901" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/anusha-seshadri-9021a3215/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:anushaseshadri1901@gmail.com" data-copy-email>Email</a>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
 </body>
 </html>
