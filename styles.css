@@ -252,7 +252,7 @@ section { padding-block: clamp(3.5rem, 8vw, 7rem); position: relative; }
 .hero__name { margin-top: .14em; }
 .hero__name span { display: block; }
 .hero__name .l2 { padding-left: .18em; }
-.hero__name .outline { color: transparent; -webkit-text-stroke: 3px var(--ink); }
+.hero__name .outline { color: transparent; -webkit-text-stroke: 1.5px var(--ink); }
 .hero__meta {
   display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 2rem; align-items: end;
   margin-top: clamp(1rem, 2.5vw, 2rem); padding-top: 1rem; border-top: var(--bw) solid var(--ink);
