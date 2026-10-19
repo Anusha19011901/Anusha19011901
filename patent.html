@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Hybrid Fuzzy Cardiac Prediction · Granted Patent — Anusha Seshadri</title>
+<meta name="description" content="Case study of Indian Patent No. 601763, granted September 2026: a hybrid trapezoidal–Gaussian fuzzy membership model with BBSO feature selection for interpretable cardiac state prediction, rebuilt from the specification as an open-source Python pipeline, by Anusha Seshadri."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DotGothic16&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav__in">
+    <a class="nav__brand" href="index.html">Anusha Seshadri</a>
+    <nav aria-label="primary"><ul class="nav__links">
+      <li><a href="projects.html" aria-current="page">Work</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></nav>
+    <div class="nav__tools">
+      <a class="btn btn--sm" href="resume.html">Résumé</a>
+      <button class="btn btn--sm btn--ink" type="button" data-term title="press ` anywhere">Terminal ▸</button>
+    </div>
+  </div>
+</header>
+
+<main class="cs">
+
+  <!-- ═══════════ 1 · HERO ═══════════ -->
+  <section class="section--tight" style="border-bottom:var(--bw) solid var(--ink);overflow:hidden">
+    <div class="lines" aria-hidden="true"></div>
+    <div class="wrap" style="position:relative">
+      <p class="eyebrow" data-reveal><a href="projects.html">Work</a>&nbsp;/&nbsp;Case study</p>
+      <h1 class="h-section" data-reveal style="--i:1"><span class="sub">Granted Patent · Indian Patent No. 601763</span>Hybrid fuzzy<br/>cardiac prediction</h1>
+      <p class="lede" data-reveal style="--i:2">A fuzzy-logic pipeline that predicts the state of a heart from imprecise clinical data, where every step from feature selection to the final score can be followed by a clinician.</p>
+
+      <div class="grid-2" style="margin-top:1.4rem;align-items:end">
+        <dl class="kv" data-reveal style="--i:3">
+          <dt>Granted</dt><dd>8 September 2026 · Indian Patent Office</dd>
+          <dt>Filed</dt><dd>19 January 2024 · 8 claims · 20-year term</dd>
+          <dt>Domain</dt><dd>Clinical prediction · explainable AI · fuzzy logic</dd>
+        </dl>
+        <div data-reveal style="--i:4">
+          <div class="tags"><span class="tag">Healthcare AI</span><span class="tag">Fuzzy logic</span><span class="tag">Explainable AI</span><span class="tag">Feature selection</span><span class="tag">Metaheuristics</span><span class="tag">Python</span></div>
+          <div class="row" style="margin-top:1.2rem"><a class="btn btn--ink" href="https://github.com/Anusha19011901/Hybrid-Fuzzy-Membership-Function" target="_blank" rel="noopener" data-cursor="GITHUB">View code on GitHub ↗</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip">
+    <div class="wrap strip__in">
+      <span>Patent No. 601763</span>
+      <span>App. No. 202441004228</span>
+      <span>Filed 19 Jan 2024</span>
+      <span>Published 9 Feb 2024</span>
+      <span>Granted 8 Sep 2026</span>
+      <span>20-year term</span>
+    </div>
+  </div>
+
+  <!-- ═══════════ 2 · PROBLEM ═══════════ -->
+  <section>
+    <div class="wrap grid-2">
+      <div>
+        <p class="eyebrow" data-reveal>01 · The problem</p>
+        <h2 class="h-section" data-reveal style="--i:1;font-size:clamp(2rem,4vw,3.2rem)">Messy data,<br/>opaque models</h2>
+      </div>
+      <div class="prose" data-reveal style="--i:2">
+        <p>Cardiovascular disease is a leading global cause of illness and death. Early, accurate prediction matters, and the data it depends on is rarely clean.</p>
+        <p>Clinical records are uncertain and imprecise. Values go missing, normal and abnormal ranges overlap, and borderline patients do not fit crisp categories. A crisp threshold treats the patient just under a cut-off as entirely different from the one just over it.</p>
+        <p>Many existing tools are black-box neural networks, or they target something else entirely: billing-code accuracy, or risk scores from ECG traces alone. They do not use fuzzy logic or hybrid membership functions, and a clinician cannot see why a prediction was made.</p>
+        <p><b>The goal:</b> a prediction approach that handles that uncertainty directly and stays interpretable at every stage.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ 3 · APPROACH ═══════════ -->
+  <section class="rule-top">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>02 · The approach</p>
+      <h2 class="h-section" data-reveal style="--i:1;font-size:clamp(2rem,4vw,3.2rem)">Six steps, each one readable</h2>
+      <p class="lede" data-reveal style="--i:2">Raw clinical data goes in, a single crisp value comes out, and nothing in between is hidden.</p>
+
+      <ol class="steps" style="margin-top:1.4rem">
+        <li class="panel step" data-reveal style="--i:1"><div class="panel__in">
+          <span class="tcard__ep">Step 01</span>
+          <h3 class="step__title">Pre-processing</h3>
+          <p>Missing values are replaced with the attribute mean. Data is standardised and normalised, and outliers and inconsistencies are removed.</p>
+        </div></li>
+        <li class="panel step" data-reveal style="--i:2"><div class="panel__in">
+          <span class="tcard__ep">Step 02</span>
+          <h3 class="step__title">BBSO feature selection</h3>
+          <p>Binary Brain Storm Optimization evolves a population of feature subsets to maximise F1-score, and stops when consecutive iterations show no improvement.</p>
+        </div></li>
+        <li class="panel step" data-reveal style="--i:3"><div class="panel__in">
+          <span class="tcard__ep">Step 03</span>
+          <h3 class="step__title">Hybrid fuzzy membership</h3>
+          <p>Each selected attribute is fuzzified with a trapezoidal and a Gaussian function combined by element-wise maximum. The core novelty.</p>
+        </div></li>
+        <li class="panel step" data-reveal style="--i:4"><div class="panel__in">
+          <span class="tcard__ep">Step 04</span>
+          <h3 class="step__title">Fuzzy inference</h3>
+          <p>A rule base relates fuzzified inputs to the output. Per-attribute models produce outputs that are combined with a weighted average.</p>
+        </div></li>
+        <li class="panel step" data-reveal style="--i:5"><div class="panel__in">
+          <span class="tcard__ep">Step 05</span>
+          <h3 class="step__title">Centroid defuzzification</h3>
+          <p>The Center of Gravity method collapses the fuzzy output into one crisp, interpretable value.</p>
+        </div></li>
+        <li class="panel step" data-reveal style="--i:6"><div class="panel__in">
+          <span class="tcard__ep">Step 06</span>
+          <h3 class="step__title">Prediction</h3>
+          <p>The heart state, including abnormalities, is predicted from that value and evaluated on accuracy, precision, recall, F1-score, and support.</p>
+        </div></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══════════ 4 · CORE IDEA ═══════════ -->
+  <section class="rule-top">
+    <div class="wrap">
+      <article class="panel panel--shadow inverse s12" data-reveal>
+        <div class="panel__in scroll-grid" style="align-items:start">
+          <div>
+            <div class="tcard">
+              <span class="tcard__ep">03 · The core idea</span>
+              <h2 class="tcard__title">Trapezoid + Gaussian, take the max</h2>
+              <span class="tcard__sub">Hybrid fuzzy membership function</span>
+            </div>
+            <div class="prose" style="margin-top:1.2rem">
+              <p>A <b>trapezoidal</b> function (parameters a, b, c, d) is bounded and captures broad trends: full membership over set intervals, nothing outside them.</p>
+              <p>A <b>Gaussian</b> function (mean μ, spread σ) is smooth and bell-shaped. It focuses membership around a key value and helps highlight abnormalities.</p>
+              <p>The hybrid takes the <b>element-wise maximum</b> of the two at every x. The result handles gradual transitions and abrupt shifts in the same function, and its shape can be matched to different data distributions by changing the parameters.</p>
+              <p class="mono mute" style="font-size:.78rem;letter-spacing:.08em">Drag the sliders. The red curve is the hybrid membership.</p>
+            </div>
+          </div>
+
+          <div class="chart" id="hybrid-chart">
+            <svg viewBox="0 0 640 400" role="img" aria-label="Hybrid fuzzy membership function: trapezoid plateaus, a Gaussian peak, and their element-wise maximum">
+              <g font-family="DotGothic16, monospace" font-size="12" letter-spacing="1" fill="var(--mute)">
+                <text x="14" y="22">HYBRID FUZZY MEMBERSHIP FUNCTION</text>
+                <text x="626" y="22" text-anchor="end" id="chart-params"></text>
+              </g>
+              <g id="chart-grid" stroke="var(--ink)" stroke-opacity=".18" stroke-width="1"></g>
+              <g id="chart-axes" font-family="DotGothic16, monospace" font-size="11" fill="var(--mute)"></g>
+              <polyline id="chart-trap" fill="none" stroke="var(--ink)" stroke-width="2" stroke-dasharray="6 5" stroke-opacity=".55"/>
+              <polyline id="chart-gauss" fill="none" stroke="var(--ink)" stroke-width="2" stroke-dasharray="2 4" stroke-opacity=".55"/>
+              <polyline id="chart-hybrid" fill="none" stroke="var(--red)" stroke-width="3.5" stroke-linejoin="round"/>
+            </svg>
+            <div class="legend mono">
+              <span><i class="legend__sw legend__sw--trap"></i>Trapezoid</span>
+              <span><i class="legend__sw legend__sw--gauss"></i>Gaussian</span>
+              <span><i class="legend__sw legend__sw--hybrid"></i>Hybrid = max</span>
+            </div>
+            <div class="sliders">
+              <label><span>a <output>2.0</output></span><input type="range" name="a" min="0" max="10" step="0.1" value="2"/></label>
+              <label><span>b <output>3.0</output></span><input type="range" name="b" min="0" max="10" step="0.1" value="3"/></label>
+              <label><span>c <output>7.0</output></span><input type="range" name="c" min="0" max="10" step="0.1" value="7"/></label>
+              <label><span>d <output>8.0</output></span><input type="range" name="d" min="0" max="10" step="0.1" value="8"/></label>
+              <label><span>μ <output>5.0</output></span><input type="range" name="mu" min="0" max="10" step="0.1" value="5"/></label>
+              <label><span>σ <output>1.0</output></span><input type="range" name="sigma" min="0.3" max="3" step="0.1" value="1"/></label>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ═══════════ 4 · REIMPLEMENTATION ═══════════ -->
+  <section class="rule-top">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>04 · Open-source reimplementation</p>
+      <h2 class="h-section" data-reveal style="--i:1;font-size:clamp(2rem,4vw,3.2rem)">The method, rebuilt<br/>and measured</h2>
+
+      <div class="grid-2" data-reveal style="--i:2">
+        <div class="prose">
+          <p>I reimplemented the patented method as a Python pipeline on the public UCI Heart Disease dataset, 920 patients from four hospitals, with a leakage-safe protocol and bootstrap confidence intervals.</p>
+          <p><b>Main findings</b></p>
+          <ul style="padding-left:1.1rem;font-size:.95rem">
+            <li>The whole model is 31 rules on one page, and every prediction comes with a per-patient account of which findings fired which rules.</li>
+            <li>Missing tests are never imputed. A patient is scored on what was measured, and the explanation says so.</li>
+            <li>Cross-validated macro F1 is 0.58, against 0.63 for a random forest under the same protocol. The gap is real, and it is the price of a model a clinician can read.</li>
+          </ul>
+          <p class="mono mute" style="font-size:.78rem;letter-spacing:.08em">Limits: single-attribute rules cannot express interactions, and this is a research reimplementation, not a clinical tool.</p>
+          <div class="row" style="margin-top:1.2rem"><a class="btn btn--ink" href="https://github.com/Anusha19011901/Hybrid-Fuzzy-Membership-Function" target="_blank" rel="noopener" data-cursor="GITHUB">View code on GitHub ↗</a></div>
+        </div>
+        <figure class="fig"><img src="assets/patent/03-patient-explanation.webp" width="1400" height="899" loading="lazy" alt="One patient explained end to end: fired terms, per-attribute contributions, combined scores, output sets, centroid and decision"/><figcaption>One patient, explained end to end.</figcaption></figure>
+      </div>
+
+      <div class="grid-2 figs" data-reveal style="--i:3">
+        <div class="tbl-wrap" style="margin-top:0">
+          <table class="tbl">
+            <thead><tr><th>Model</th><th>CV macro F1</th><th>Test macro F1 [95% CI]</th></tr></thead>
+            <tbody>
+              <tr><td>Random forest</td><td>0.63 ± 0.05</td><td>0.62 [0.54, 0.69]</td></tr>
+              <tr><td>Logistic regression</td><td>0.62 ± 0.05</td><td>0.61 [0.54, 0.68]</td></tr>
+              <tr><td><b>Hybrid fuzzy, 31 rules</b></td><td><b>0.58 ± 0.03</b></td><td><b>0.50 [0.43, 0.57]</b></td></tr>
+              <tr><td>Hybrid fuzzy + pairwise rules</td><td>0.58 ± 0.04</td><td>0.54 [0.47, 0.61]</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <figure class="fig"><img src="assets/patent/04-test-ci-comparison.webp" width="1400" height="451" loading="lazy" alt="Held-out test macro F1 and accuracy with bootstrap 95% confidence intervals for every model"/><figcaption>Held-out macro F1 and accuracy with bootstrap 95% CIs.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ 5 · RESULTS & REFLECTION ═══════════ -->
+  <section class="rule-top">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>05 · Results and reflection</p>
+      <h2 class="h-section" data-reveal style="--i:1;font-size:clamp(2rem,4vw,3.2rem)">What the patent protects,<br/>and what the numbers say</h2>
+
+      <div class="grid-2" style="margin-top:1rem">
+        <div class="prose" data-reveal style="--i:2">
+          <p>The contribution is the method, not a headline score. Fuzzy rules and centroid defuzzification give an output a clinician can trace back to the inputs. BBSO selects features against F1-score with no hand-tuning. The hybrid membership function is the novel piece: a trapezoidal base for broad trends and a Gaussian peak for the values that matter most, in one function.</p>
+          <p>The reported results are modest, and the patent states them plainly. Both the hybrid fuzzy model and a Keras deep learning baseline reach the same accuracy and weighted F1 on their respective test sets. The two evaluations use different class schemes and sample sizes, so they are a reference point rather than a direct comparison. The Low class in the fuzzy model is almost never recalled, which points at class imbalance.</p>
+          <p><b>What I would improve next:</b></p>
+          <ul style="padding-left:1.1rem;font-size:.95rem">
+            <li>Calibrate the combined scores before defuzzification, or regularise the cut-points, and check whether the CV-to-test drop closes.</li>
+            <li>Re-run selection and the fuzzy model with the three hospital-linked attributes dropped, to measure how much rests on them.</li>
+            <li>Review the rule base with clinicians, since interpretability is only valuable if the rules match how they reason.</li>
+            <li>Validate on a second, more recent dataset.</li>
+          </ul>
+        </div>
+
+        <div data-reveal style="--i:3">
+          <p class="eyebrow">Reported in the patent</p>
+          <div class="tbl-wrap">
+            <table class="tbl">
+              <thead><tr><th>Model</th><th>Classes</th><th>Test n</th><th>Accuracy</th><th>Weighted F1</th></tr></thead>
+              <tbody>
+                <tr><td>Hybrid fuzzy membership</td><td>3 · High / Moderate / Low</td><td>919</td><td>0.43</td><td>0.40</td></tr>
+                <tr><td>Deep learning baseline (Keras)</td><td>5 · labels 0–4</td><td>184</td><td>0.43</td><td>0.40</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="mono mute" style="font-size:.75rem;letter-spacing:.06em;margin-top:.7rem">Hybrid model, High class: precision 0.48 · recall 0.54 · F1 0.50. Low class: recall 0.01.</p>
+
+          <p class="eyebrow" style="margin-top:1.4rem">Stack</p>
+          <dl class="kv" style="margin-top:.8rem">
+            <dt>Language</dt><dd>Python</dd>
+            <dt>Membership</dt><dd>NumPy · linspace, where, maximum</dd>
+            <dt>Plots</dt><dd>Matplotlib</dd>
+            <dt>Baseline</dt><dd>Keras Sequential API</dd>
+            <dt>Selection</dt><dd>Custom BBSO implementation</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ 7 · LINKS ═══════════ -->
+  <section class="rule-top">
+    <div class="wrap grid-2">
+      <div>
+        <p class="eyebrow" data-reveal>06 · Links</p>
+        <h2 class="h-section" data-reveal style="--i:1;font-size:clamp(2rem,4vw,3.2rem)">Read more</h2>
+      </div>
+      <div class="links-col" data-reveal style="--i:2">
+        <a class="link-row" href="https://iprsearch.ipindia.gov.in/publicsearch" target="_blank" rel="noopener" data-cursor="OPEN"><span>Patent record · IN601763 B1</span><small>IP India ↗</small></a>
+        <a class="link-row" href="https://github.com/Anusha19011901/Hybrid-Fuzzy-Membership-Function" target="_blank" rel="noopener" data-cursor="GITHUB"><span>Code · reimplementation</span><small>GitHub ↗</small></a>
+        <a class="link-row" href="https://lnkd.in/p/eBSiFA_Y" target="_blank" rel="noopener" data-cursor="OPEN"><span>LinkedIn post</span><small>↗</small></a>
+        <a class="link-row" href="projects.html" data-cursor="GO"><span>All work</span><small>↗</small></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="next section--tight">
+    <div class="wrap row sp">
+      <div>
+        <p class="eyebrow" data-reveal>Get in touch</p>
+        <p class="next__lines" data-reveal style="--i:1"><span>Working on interpretable clinical ML? <span class="cut">Let's talk.</span></span></p>
+      </div>
+      <a class="btn btn--red" href="contact.html" data-reveal style="--i:2" data-cursor="HI">Contact</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__in">
+    <p class="footer__note">© 2026 Anusha Seshadri</p>
+    <div class="footer__links">
+      <a href="https://github.com/Anusha19011901" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/anusha-seshadri-9021a3215/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:anushaseshadri1901@gmail.com" data-copy-email>Email</a>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script>
+/* hybrid membership chart — trapezoid ∨ gaussian, no dependencies */
+(() => {
+  const root = document.getElementById('hybrid-chart');
+  if (!root) return;
+  const W = 640, H = 400, L = 46, R = 18, T = 40, B = 46;
+  const px = x => L + (x / 10) * (W - L - R);
+  const py = y => T + (1 - y) * (H - T - B);
+  const N = 400;
+
+  const grid = root.querySelector('#chart-grid'), axes = root.querySelector('#chart-axes');
+  let g = '', a = '';
+  for (let x = 0; x <= 10; x += 2) {
+    g += `<line x1="${px(x)}" y1="${T}" x2="${px(x)}" y2="${py(0)}"/>`;
+    a += `<text x="${px(x)}" y="${py(0) + 18}" text-anchor="middle">${x}</text>`;
+  }
+  for (let y = 0; y <= 1; y += .2) {
+    g += `<line x1="${L}" y1="${py(y)}" x2="${W - R}" y2="${py(y)}"/>`;
+    a += `<text x="${L - 8}" y="${py(y) + 4}" text-anchor="end">${y.toFixed(1)}</text>`;
+  }
+  a += `<text x="${(L + W - R) / 2}" y="${H - 8}" text-anchor="middle" letter-spacing="2">x</text>`;
+  a += `<text x="14" y="${(T + py(0)) / 2}" text-anchor="middle" transform="rotate(-90 14 ${(T + py(0)) / 2})" letter-spacing="2">MEMBERSHIP</text>`;
+  grid.innerHTML = g; axes.innerHTML = a;
+
+  const inputs = Object.fromEntries([...root.querySelectorAll('input[type=range]')].map(i => [i.name, i]));
+  const trapLine = root.querySelector('#chart-trap'), gaussLine = root.querySelector('#chart-gauss'), hybLine = root.querySelector('#chart-hybrid');
+  const params = root.querySelector('#chart-params');
+
+  function draw() {
+    let { a, b, c, d, mu, sigma } = Object.fromEntries(Object.entries(inputs).map(([k, i]) => [k, +i.value]));
+    // keep a ≤ b ≤ c ≤ d, as in the patent's trapezoidal base
+    b = Math.max(a, b); c = Math.max(b, c); d = Math.max(c, d);
+    const vals = { a, b, c, d, mu, sigma };
+    for (const k in inputs) { inputs[k].value = vals[k]; inputs[k].previousElementSibling.querySelector('output').value = vals[k].toFixed(1); }
+    params.textContent = `a=${a} b=${b} c=${c} d=${d} · μ=${mu} σ=${sigma}`;
+
+    let tp = '', gp = '', hp = '';
+    for (let i = 0; i <= N; i++) {
+      const x = (i / N) * 10;
+      const t = ((x >= a && x <= b) || (x >= c && x <= d)) ? 1 : 0;     // np.where
+      const gs = Math.exp(-((x - mu) ** 2) / (2 * sigma * sigma));        // gaussian
+      const h = Math.max(t, gs);                                           // np.maximum
+      tp += `${px(x).toFixed(1)},${py(t).toFixed(1)} `;
+      gp += `${px(x).toFixed(1)},${py(gs).toFixed(1)} `;
+      hp += `${px(x).toFixed(1)},${py(h).toFixed(1)} `;
+    }
+    trapLine.setAttribute('points', tp); gaussLine.setAttribute('points', gp); hybLine.setAttribute('points', hp);
+  }
+  Object.values(inputs).forEach(i => i.addEventListener('input', draw));
+  draw();
+})();
+</script>
+</body>
+</html>

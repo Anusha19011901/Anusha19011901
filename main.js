@@ -157,7 +157,8 @@
       { text: '  10  Quantum Kernel SVM                        (Qiskit)' },
       { text: '  11  Grover\'s Search                           (Qiskit)' },
       { text: '  12  BB84 Quantum Key Distribution             (Qiskit)' },
-      { text: '  --  Patent 202441004228 · 2 publications' },
+      { text: '  --  Granted patent · Indian Patent No. 601763 · 2 publications' },
+      { text: '→ patent.html', color: MUTE },
       { text: '→ projects.html', color: MUTE },
     ],
     skills: () => [
